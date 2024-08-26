@@ -17,6 +17,14 @@ function Layout({ children }) {
           <div className="content-container">
             <div className="main">{children}</div>
           </div>
+          <script async defer src="https://a.holt.courses/latest.js"></script>
+          <noscript>
+            <img
+              src="https://a.holt.courses/noscript.gif"
+              alt=""
+              referrerPolicy="no-referrer-when-downgrade"
+            />
+          </noscript>
           <Footer
             twitter={courseInfo.social.twitter}
             github={courseInfo.social.github}
