@@ -393,7 +393,7 @@ ol.sections-name .lesson-preface {
   position: relative;
   align-items: center;
   justify-content: center;
-  background: var(--secondary);
+  background: var(--primary);
   font-size: 100px;
   padding: 25px;
   width: 40%;
@@ -467,8 +467,8 @@ ol.sections-name .lesson-details {
   }
 
   ol.sections-name .lesson-preface {
-    font-size:60px
-   }
+    font-size: 60px;
+  }
 }
 
 .lesson-details h3 {
@@ -517,7 +517,7 @@ ol.sections-name .lesson-details {
 
 code,
 pre code {
-  padding: .5rem;
+  padding: 0.5rem;
 }
 
 code,
