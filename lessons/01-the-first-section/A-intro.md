@@ -1,18 +1,39 @@
----
-title: "Introduction"
-description: "The introduction to this course."
-keywords:
-  - A course starter
-  - Next.js
-  - React
-  - Brian Holt
----
+## Outline
 
-Hello! And welcome to the Next.js course starter by [Brian Holt][twitter].
-
-![Cat, dog, and rat logo for the course](./images/BRAND-WHearts.png)
-
-This is a course starter specifically made for making online courses and optimized for use with [Frontend Masters][fem].
-
-[twitter]: https://twitter.com/holtbt
-[fem]: https://www.frontendmasters.com
+- Pure React
+- Components
+- Building your own stack
+  - Vite
+  - Prettier
+  - ESLint
+  - npm
+- JSX
+- Hooks
+- Forms
+- Effects
+  - Gets
+  - Posts
+  - Async Operations
+- React Dev Tools
+- Custom Hooks
+- Component Composition / Single Purpose Components
+- Other Useful Hooks
+- React Ecosystem
+  - Tanstack Router
+  - Tanstack Query
+  - Tailwind
+  - Data Stores
+- Advance Concepts
+  - Portals
+  - Error Handling
+  - Context
+- Testing
+  - Vitest
+  - React Testing Library
+  - Testing a hook
+  - Vitest Extension
+  - Testing a component
+  - Coverage
+- Future of React
+  - React Compiler / React Forget
+  - Suspense
