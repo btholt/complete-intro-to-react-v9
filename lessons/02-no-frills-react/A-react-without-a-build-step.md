@@ -4,7 +4,7 @@ description: "Brian teaches React without any frills: just you, some JavaScript,
 
 Let's start by writing pure React. No compile step. No JSX. No Babel. No Webpack or Vite. Just some JavaScript on a page.
 
-Let's start your project. Create your project directory. I'm going to call mine `adopt-me` since we're going to be building a pet adoption app throughout this course. Create an index.html and put it into a `src/` directory inside of your project folder. In index.html put:
+Let's start your project. Create your project directory. I'm going to call mine `pizza` since we're going to be building a pizza ordering system throughout this course. Create an index.html and put it into a `src/` directory inside of your project folder. In index.html put:
 
 ```javascript
 <!DOCTYPE html>
@@ -39,7 +39,7 @@ Let's run this. We could open it directly in our browser but I like using [serve
 
 > Let's add some style! [Click here][style] to get the stylesheet for this course. Make a file called style.css in src/ and paste the previous file there. If you follow along with the course and use the same class names, the styles will be applied for you automatically. This isn't a course on CSS so I make no assertion it's any good!
 
-Make a new file called src/App.js and put this in there.
+Make a new directory calle src and a new file called App.js in that directory and put this in there.
 
 ```javascript
 const App = () => {
