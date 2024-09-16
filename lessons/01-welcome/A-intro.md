@@ -9,12 +9,12 @@
   - npm
 - JSX
 - Hooks
+- React Dev Tools
 - Forms
 - Effects
   - Gets
   - Posts
   - Async Operations
-- React Dev Tools
 - Custom Hooks
 - Component Composition / Single Purpose Components
 - Other Useful Hooks
