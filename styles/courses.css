@@ -337,6 +337,10 @@ blockquote > *:last-child {
   margin-bottom: 0;
 }
 
+blockquote > *:first-child {
+  margin-top: 0;
+}
+
 .lesson-content img {
   max-width: 100%;
 }
