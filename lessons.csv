@@ -1,0 +1,14 @@
+order,sectionTitle,lessonTitle,slug,sectionIcon,filePath,description
+01A,Welcome,Intro,welcome/intro,info-circle,/lessons/welcome/intro,""
+02A,No Frills React,React without a Build Step,no-frills-react/react-without-a-build-step,eye,/lessons/no-frills-react/react-without-a-build-step,"Brian teaches React without any frills: just you, some JavaScript, and the browser. No build step."
+02B,No Frills React,Components,no-frills-react/components,eye,/lessons/no-frills-react/components,""
+03A,Tools,npm,tools/npm,screwdriver-wrench,/lessons/tools/npm,""
+03B,Tools,Code Formatting,tools/code-formatting,screwdriver-wrench,/lessons/tools/code-formatting,""
+03C,Tools,ESLint,tools/linting,screwdriver-wrench,/lessons/tools/linting,""
+03D,Tools,Git,tools/git,screwdriver-wrench,/lessons/tools/git,Git is a critical part of any JS project and Brian makes sure you have it set up.
+03E,Tools,Vite,tools/vite,screwdriver-wrench,/lessons/tools/vite,""
+04A,Core React Concepts,JSX,core-react-concepts/jsx,book,/lessons/core-react-concepts/jsx,JSX is an essential part of writing React. Brian teaches you to leverage your newfound React knowledge and make it much easier to read with JSX
+04B,Core React Concepts,Hooks,core-react-concepts/hooks,book,/lessons/core-react-concepts/hooks,React manages view state through a mechanism called hooks. Brian teaches you how to use them as you build components.
+04C,Core React Concepts,Effects,core-react-concepts/effects,book,/lessons/core-react-concepts/effects,"useEffect is a critical hook for React, allowing developers to do asynchronous actions like making HTTP requests"
+04D,Core React Concepts,Dev Tools,core-react-concepts/dev-tools,book,/lessons/core-react-concepts/dev-tools,An essential tool in any React developer's toolbox is the official React Dev Tools extension. Brian shows you how to install and use them.
+04E,Core React Concepts,Custom Hooks,core-react-concepts/custom-hooks,book,/lessons/core-react-concepts/custom-hooks,""
