@@ -47,7 +47,11 @@ async function fetchPizzaTypes() {
 
 // replace the options
 {
-  pizzaTypes.map((pizza) => <option value={pizza.id}>{pizza.name}</option>);
+  pizzaTypes.map((pizza) => (
+    <option key={pizza.id} value={pizza.id}>
+      {pizza.name}
+    </option>
+  ));
 }
 
 // replace <Pizza /> and button at the end
@@ -58,7 +62,8 @@ async function fetchPizzaTypes() {
 - the `[]` at the end of the useEffect is where you declare your data dependencies. React wants to know _when_ to run that effect again. You don't give it data dependencies, it assumes any time any hook changes that you should run the effect again. This is bad because that would mean any time setPets gets called it'd re-run render and all the hooks again. See a problem there? It'd run infinitely since requestPets calls setPets.
 - You can instead provide which hooks to watch for changes for. In our case, we actually only want it to run once, on creation of the component, and then to not run that effect again. (we'll do searching later via clicking the submit button) You can accomplish this only-run-on-creation by providing an empty array.
 - We're using a loading flag to only display data once it's ready. We'll use TanStack Query in a bit to make this code look cleaner. But this is how you do conditional showing/hiding of components in React.
+- The `key` portion is an interesting one. When React renders arrays of things, it doesn't know the difference between something is new and something is just being re-ordered in the array (think like changing the sorting of a results list, like price high-to-low and then priced low-to-high). Because of this, if you don't tell React how to handle those situations, it just tears it all down and re-renders everything anew. This can cause unnecessary slowness on devices. This is what key is for. Key tells React "this is a simple identifier of what this component is". If React sees you just moved a key to a different order, it will keep the component tree. So key here is to associate the key to something unique about that component. 99/100 this is a database ID of some variety. _Don't_ use the index of the array as that just isn't right unless the array is literally is never going to change order.
 
 > 🏁 [Click here to see the state of the project up until now: 05-effects][step]
 
-[step]: https://github.com/btholt/citr-v8-project/tree/master/05-effects
+[step]: https://github.com/btholt/citr-v9-project/tree/master/05-effects

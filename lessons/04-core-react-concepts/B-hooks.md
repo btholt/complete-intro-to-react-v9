@@ -96,8 +96,8 @@ const [pizzaSize, setPizzaSize] = useState("medium");
   […]
 </select>;
 
-// replace the div surrounding the radio buttons
-<div onChange={(e) => setPizzaSize(e.target.value)}>[…]</div>;
+// add to all the radio buttons
+onChange={(e) => setPizzaSize(e.target.value)}
 ```
 
 - This is called a hook. Other frameworks like Vue have adopted it as well.
@@ -113,7 +113,14 @@ const [pizzaSize, setPizzaSize] = useState("medium");
 - Similar to above. We're using `onChange` and `onBlur` because it makes it more accessible.
 
 > I'm showing you how to do a "controlled form" in that we're using hooks to control each part of the form. In reality, it'd be better to leave these _uncontrolled_ (aka don't set the value) and wrap the whole thing in a form. Then we can listen for submit events and use that event to gather info off the form. This is less code and less burdensome to write. If you have a standard form sort of thing to write, do that as an uncontrolled form. If you need to do dynamic validation, react to a user typing a la typeahead (functionality that provides real-time suggestions), or something of the ilk, then a controlled input is perfect, otherwise stick to uncontrolled.
-> Also what's new in React is called a "form action" that is considered unstable. In the future you will just add `<form action="blah">[…]</form>` and a form action will handle the entire form for you. This will then dovetai
+> Also what's new in React is called a "form action" that is considered unstable. In the future you will just add `<form action="blah">[…]</form>` and a form action will handle the entire form for you.
+
+Another side note: event bubbling works in React works just like you would expect. In theory you can have mega event handler in React but the lint rules and React's dev tools get noisy about it if you do it that way so I tend to just follow their recommendation.
+
+```javascript
+// you could replace the div surrounding the radio buttons and remove all the onChange handlers
+<div onChange={(e) => setPizzaSize(e.target.value)}>[…]</div>
+```
 
 > 🏁 [Click here to see the state of the project up until now: 04-hooks][step]
 
