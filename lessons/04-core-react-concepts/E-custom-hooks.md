@@ -93,6 +93,6 @@ useDebugValue(pizzaOfTheDay ? `${pizzaOfTheDay.name}` : "Loading...");
 
 Now open your React Dev Tools and inspect our PizzaOfTheDay component. You'll see our debug value there. This is helpful when you have _lots_ of custom hooks and in particular lots of reused custom hooks that have differing values. It can help at a glance to discern which hook has which data inside of it.
 
-> 🏁 [Click here to see the state of the project up until now: 05-custom-hooks][step]
+> 🏁 [Click here to see the state of the project up until now: 06-custom-hooks][step]
 
-[step]: https://github.com/btholt/citr-v9-project/tree/master/05-custom-hooks
+[step]: https://github.com/btholt/citr-v9-project/tree/master/06-custom-hooks
