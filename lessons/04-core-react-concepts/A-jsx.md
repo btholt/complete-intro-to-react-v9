@@ -14,7 +14,7 @@ Make a new file called Pizza.jsx.
 ```javascript
 const Pizza = (props) => {
   return (
-    <div>
+    <div className="pizza">
       <h1>{props.name}</h1>
       <p>{props.description}</p>
     </div>

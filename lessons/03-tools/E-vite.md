@@ -69,6 +69,9 @@ Now let's set up our scripts to start Vite. In package.json, put:
 
 Be sure to also add `"type: module"` to your package.json. Vite has deprecated support for Common.js and now requires you to use ESM style modules.
 
+> Note: you will get a warning from Vite like `Files in the public directory are served at the root path.
+Instead of /public/style.css, use /style.css.` – ignore this, we'll fix it in a bit.
+
 `dev` will start the development server, typically on [http://localhost:5173/](). `build` will prepare static files to be deployed (to somewhere like GitHub Pages, Vercel, Netlify, AWS S3, etc.) `preview` lets you preview your production build locally.
 
 > Do note that we've changed domains here. By default Vite uses localhost:5173. Fun fact, 5173 sort of spells VITE if you make the 5 its Roman Numeral version, V.
