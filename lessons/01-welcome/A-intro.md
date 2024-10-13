@@ -18,6 +18,7 @@
 - Custom Hooks
 - Component Composition / Single Purpose Components
 - Other Useful Hooks
+- Context
 - React Ecosystem
   - Tanstack Router
   - Tanstack Query
@@ -26,7 +27,6 @@
 - Advance Concepts
   - Portals
   - Error Handling
-  - Context
 - Testing
   - Vitest
   - React Testing Library
