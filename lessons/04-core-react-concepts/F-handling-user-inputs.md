@@ -43,8 +43,8 @@ export default function Cart({ cart, checkout }) {
     <div className="cart">
       <h2>Cart</h2>
       <ul>
-        {cart.map((item) => (
-          <li>
+        {cart.map((item, index) => (
+          <li key={index}>
             <span className="size">{item.size}</span> –
             <span className="type">{item.pizza.name}</span> –
             <span className="price">{item.price}</span>
@@ -57,6 +57,8 @@ export default function Cart({ cart, checkout }) {
   );
 }
 ```
+
+> Normally doing key this way is a bad idea, but we wouldn't reorganize this list, nor care if it rerendered anyway, so it gets a pass.
 
 Now we have a nice shopping cart experience. So how do actually checkout on the server? Let's do that! We probably want to do it as the Order level. It already has the Cart and we can just leave the Cart as a dumb display component. We can just pass a function to call into the Cart component and call it and run the function at the Order level.
 

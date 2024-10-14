@@ -71,6 +71,7 @@ Great, let's go modify App.jsx now
 
 ```javascript
 // add at top
+// remove useState import from react import
 import { RouterProvider, createRouter } from "@tanstack/react-router";
 import { routeTree } from "./routeTree.gen";
 

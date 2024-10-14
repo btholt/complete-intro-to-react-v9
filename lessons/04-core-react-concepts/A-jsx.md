@@ -32,6 +32,46 @@ Notice the strange `{props.name}` syntax: this is how you output JavaScript expr
 
 > Notice we don't have to do `import React from 'react'` here like we used to. The latest version of JSX handles that for you so you only need to explicitly import the React package when you need to use something from it; otherwise feel free to do JSX without having to import React!
 
+## ESLint
+
+Let's fix our ESLint as JSX adds new twists and turns we need help with. Please install
+
+```bash
+npm i -D eslint-plugin-react@7.37.1
+```
+
+Then in your eslint.config.mjs
+
+```javascript
+// at top
+
+// under js.configs.recommended
+{
+  ...reactPlugin.configs.flat.recommended,
+  settings: {
+    react: {
+      version: "detect",
+    },
+  },
+},
+reactPlugin.configs.flat["jsx-runtime"],
+
+// add to files
+files: ["**/*.js", "**/*.jsx"], // add JSX
+
+// inside the same object files, top level field
+rules: {
+  "react/no-unescaped-entities": "off",
+  "react/prop-types": "off",
+},
+```
+
+We have to add two configs, one to allow ESLint to understand React and add some basic React rules, and one to modernize it as React 17 changed a bit how ESLint interacts with React.
+
+We're also turning off two rules that I don't find particularly useful: unescaped entites (which make you change things like `'` into `&apos`) and prop types which no one has used in a decade at this point. Otherwise we should be good to go.
+
+## Back to JSX
+
 So now JSX is demystified a bit, let's go convert App.js.
 
 ```javascript
