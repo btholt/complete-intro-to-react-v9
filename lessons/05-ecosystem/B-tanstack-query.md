@@ -66,6 +66,7 @@ function PastOrdersRoute() {
   const { isLoading, data } = useQuery({
     queryKey: ["past-orders", page],
     queryFn: () => getPastOrders(page),
+    staleTime: 30000,
   });
   if (isLoading) {
     return (
@@ -113,6 +114,7 @@ function PastOrdersRoute() {
 - We're giving it keys which act as cache keys. We're giving `past-orders` as the key but it could be any unique key to this page. Then we give it the page. What's cool about this is that while we will request the page 1 the first time we request it, the second time we request page 1 it'll see it'll see that we already have this in cache and not request it. How cool is is that? That used to require so much logic to handle it and now React Query just does it for you.
 - Now open the dev tools. You can see all the pages being loaded in. Pretty cool, right?
 - Try taking out `page` from the query key. It'll yell at you. This is the ESLint config we pulled in from Tanstack Query. Because we're using that `page` in the request, we need to use it as a caching key. If you depend on a variable to make a request, it should be apart of the caching key.
+- We're giving it a `staleTime` of 30 seconds (30,000 milliseconds). This allows someone using the page to browse around a bit and not bombard the API too much but the page won't ever be too stale. If you omit `staleTime`, it will refetch every time.
 
 That's it! React Query is both simple to use and super flexible to handle a tough problem. It's one of my favorite libraries for React.
 
