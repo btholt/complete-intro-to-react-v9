@@ -16,17 +16,15 @@
   - Posts
   - Async Operations
 - Custom Hooks
-- Component Composition / Single Purpose Components
-- Other Useful Hooks
 - Context
 - React Ecosystem
   - Tanstack Router
   - Tanstack Query
   - Tailwind
-  - Data Stores
 - Advance Concepts
   - Portals
   - Error Handling
+  - Uncontrolled Forms
 - Testing
   - Vitest
   - React Testing Library
@@ -35,5 +33,6 @@
   - Testing a component
   - Coverage
 - Future of React
-  - React Compiler / React Forget
+  - Form Actions
   - Suspense
+  - React Compiler / React Forget
