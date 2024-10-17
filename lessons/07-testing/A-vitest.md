@@ -14,28 +14,13 @@ They designed it to be a drop-in replacement for [Jest][jest] which is what I ha
 
 While Vitest is not using Jasmine directly, its APIs mimic Jasmine APIs (just like Jest.)
 
-Let's get going Run `npm install -D vitest@2.1.3 @vitest/browser@2.1.3 playwright@1.48.0 vitest-browser-react@0.0.1`.
+Let's get going. Run `npm install -D vitest@2.1.3 @testing-library/react@16.0.1 happy-dom@15.7.4`.
 
-> This course previously taught [@testing-library/react][tlr] and used a synthetic DOM tool called [happy-dom][hd]. Vitest now has a first class integration with [Playwright][playwright] and their own version @testing-library/react, vitest-browser-react. Hence this version will use those tools. If you want to learn those other tools, the [v8][v8] version of this course all still works.
+`@testing-library/react`, formerly called `react-testing-library`, is a tool that has a bunch of convenience features that make testing React significantly easier and is now the recommended way of testing React, supplanting [Enzyme][enzyme]. Previous versions of this course teach Enzyme if you'd like to see that (though I wouldn't recommend it unless you have to.)
 
-We are going to be using the latest-and-greatest testing tool from Microsoft called Playwright, the spirtual successor to Google's Puppeteer tool. Using this tool, your command line client will spin up a _real_ copy of Webkit, Firefox, or Chromium and run your tests inside of them. Can't beat the real thing, and it's finally fast and not-flaky enough for it to be worth it!
+We need to tell Vitest that we need a browser-like environment which it will fulfill via the [happy-dom][hd] package. happy-dom is a lot like jsdom but smaller, doesn't do 100% of what the browser does, and is much, much faster.
 
-Okay, let's go set up Vitest to work with our Vite project. In your `vite.config.js`
-
-```javascript
-
-// under server
-test: {
-  setupFiles: ["vitest-browser-react"],
-  browser: {
-    enabled: true,
-    name: "firefox", // or chromium or webkit
-    provider: "playwright",
-  },
-},
-```
-
-If you've never run Playwright before, you should run `npx playwright install` to install all the browser stuff necessary.
+Next go into your src directory and create a folder called `__tests__`. Notice that's double underscores on both sides. Why double? They borrowed it from Python where double underscores ("dunders" as I've heard them called) mean something magic happens (in essence it means the name itself has significance and something is looking for that path name exactly.) In this case, Vitest assumes all JS files in here are tests.
 
 Let's go add an npm script. In your package.json.
 
@@ -45,28 +30,26 @@ Let's go add an npm script. In your package.json.
 
 > Fun trick: if you call it test, npm lets you run that command as just `npm t`.
 
-This command let's you run Vitest in an interactive mode where it will re-run tests selectively as you save them. This lets you get instant feedback if your test is working or not. This is probably my favorite feature of Vitest. So try it now. It should error because we have no tests, but it should open a browser with the testing harness loaded.
+This command let's you run Jest in an interactive mode where it will re-run tests selectively as you save them. This lets you get instant feedback if your test is working or not. This is probably my favorite feature of Vitest.
 
-```bash
-# these all do the same thing
-npm run test
-npm test
-npm t
+Okay, one little configuration to add to your vite.config.js
+
+```javascript
+  // add this to the config object
+test: {
+  environment: "happy-dom",
+},
 ```
-
-Also good to go install the [Vitest VS Code extension][vitest-vsc] if you're using VS Code.
 
 Now that we've got that going, let's go write a test.
 
-[vitest-vsc]: https://marketplace.visualstudio.com/items?itemName=vitest.explorer
 [jest]: https://jestjs.io
 [jasmine]: https://jasmine.github.io/
 [enzyme]: http://airbnb.io/enzyme/
+[istanbul]: https://istanbul.js.org
 [res]: https://raw.githubusercontent.com/btholt/complete-intro-to-react-v5/testing/__mocks__/@frontendmasters/res.json
+[app]: https://github.com/btholt/citr-v8-project/tree/master/14-context
 [fb]: https://twitter.com/cpojer/status/1524419433938046977
 [hd]: https://github.com/capricorn86/happy-dom
 [vitest]: https://vitest.dev/
 [v4]: https://frontendmasters.com/courses/intermediate-react-v4/setup-jest-testing-library/
-[tlr]: https://github.com/testing-library/react-testing-library
-[v8]: https://frontendmasters.com/courses/intermediate-react-v5/setup-react-testing-library-vitest/
-[playwright]: https://playwright.dev/
