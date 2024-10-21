@@ -33,6 +33,13 @@
   - Testing a component
   - Coverage
 - Future of React
+  - General React 19
+    - Intro to Intermediate
+    - use server vs use client
+    - preload and preconnect
+    - link go to header
+    - custom components
+    - See here to see more
   - Form Actions
-  - Suspense
+  - Suspense / use
   - React Compiler / React Forget
