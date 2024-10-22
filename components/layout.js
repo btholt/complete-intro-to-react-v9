@@ -29,6 +29,7 @@ function Layout({ children }) {
             twitter={courseInfo.social.twitter}
             github={courseInfo.social.github}
             linkedin={courseInfo.social.linkedin}
+            bluesky={courseInfo.social.bluesky}
           />
         </div>
         <script async defer src="https://a.holt.courses/latest.js"></script>

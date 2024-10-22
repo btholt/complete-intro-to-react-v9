@@ -2,8 +2,9 @@ import React from "react";
 import Gh from "./github";
 import Tw from "./twitter";
 import Li from "./linkedin";
+import Bs from "./bluesky";
 
-export default function Footer({ twitter, linkedin, github }) {
+export default function Footer({ twitter, linkedin, github, bluesky }) {
   return (
     <footer className="footer">
       <ul className="socials">
@@ -11,6 +12,13 @@ export default function Footer({ twitter, linkedin, github }) {
           <li className="social">
             <a href={`https://twitter.com/${twitter}`}>
               <Tw />
+            </a>
+          </li>
+        ) : null}
+        {bluesky ? (
+          <li className="social">
+            <a href={`https://bsky.app/profile/${bluesky}`}>
+              <Bs />
             </a>
           </li>
         ) : null}

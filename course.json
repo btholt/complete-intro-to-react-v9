@@ -9,9 +9,21 @@
   "social": {
     "linkedin": "btholt",
     "github": "btholt",
-    "twitter": "holtbt"
+    "twitter": "holtbt",
+    "bluesky": "brianholt.me"
   },
   "description": "Learn how to make amazing web apps with React with Brian Holt as taught for Frontend Masters!",
-  "keywords": ["Brian Holt", "React", "Meta", "Facebook", "Redux", "web development", "javascript", "frontend", "front end"],
+  "keywords": [
+    "Brian Holt",
+    "React",
+    "Meta",
+    "Facebook",
+    "tanstack",
+    "testing",
+    "web development",
+    "javascript",
+    "frontend",
+    "front end"
+  ],
   "csvPath": "./out/lessons.csv"
 }
