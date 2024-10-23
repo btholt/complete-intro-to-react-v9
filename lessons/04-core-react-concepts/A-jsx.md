@@ -1,4 +1,5 @@
 ---
+title: JSX
 description: >-
   Explore the integration of JSX in React applications with Brian Holt's
   "Complete Intro to React, v9" course, as it simplifies HTML tags into
