@@ -1,3 +1,16 @@
+---
+description: >-
+  Learn best practices for React component creation by separating script tags,
+  utilizing props, and creating reusable components like a dynamic Pizza
+  component. Enhance your React app development skills with practical examples
+  and avoid common warnings related to component keys.
+keywords:
+  - React components
+  - props
+  - dynamic components
+  - best practices
+  - reusable components
+---
 Now that we've done that, let's separate this out from a script tag on the DOM to its own script file (best practice.) Make a new file in your `src` directory called `App.js` and cut and paste your code into it.
 
 Modify your code so it looks like:

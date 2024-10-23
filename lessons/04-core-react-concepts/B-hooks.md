@@ -1,5 +1,15 @@
 ---
-description: "React manages view state through a mechanism called hooks. Brian teaches you how to use them as you build components."
+description: >-
+  Learn how to create a pizza order form using React with interactive elements
+  like dropdowns and radio buttons controlled by hooks for managing state,
+  offering insights into controlled and uncontrolled forms.
+keywords:
+  - React hooks
+  - pizza order form
+  - controlled form
+  - uncontrolled form
+  - useState
+  - React input handling
 ---
 
 Okay, so now we want to make it so people can add pizzas to their order. We need a little form that allows them to select the pizza and the size. Create a new file called Order.jsx and add the following:

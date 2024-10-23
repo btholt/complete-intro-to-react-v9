@@ -1,5 +1,21 @@
 ---
-title: "use and Suspense"
+title: use and Suspense
+description: >-
+  Explore the latest developments in React 19 with React Suspense and the new
+  'use' hook, offering a seamless rendering experience by managing data-fetching
+  with promises and integration with TanStack Query. Learn how to effectively
+  implement Suspense in your React components, enabling smoother user
+  interactions by ensuring all data is loaded before rendering. Discover
+  innovative ways to handle suspended components, use fallback techniques, and
+  integrate error boundaries for optimal web development practices.
+keywords:
+  - React Suspense
+  - React 19
+  - use hook
+  - TanStack Query
+  - data fetching
+  - React components
+  - error handling
 ---
 
 We've been talking about React Suspense for a long time, and technically still we are not suppose to use it directly. But we React 19 we will get some blessed ways to start using it. (Some libraries already use it.)

@@ -1,6 +1,17 @@
 ---
-description: ""
-title: "v8"
+description: >-
+  Learn how to effectively utilize Vitest's built-in V8 code coverage tool to
+  measure test coverage in your code with simple setup instructions, including
+  script configuration for automated coverage reports. Discover how to identify
+  missing test coverage areas using an interactive viewer and consider using
+  Istanbul for alternative reporting. Enhance your testing strategy today!
+title: v8
+keywords:
+  - Vitest
+  - V8
+  - test coverage
+  - Istanbul
+  - code testing
 ---
 
 One last very cool trick that Vitest has built into it: [v8][v8]. v8 uses Chrome's builtin test coverage tool which tells you _how much_ of your code that you're covering with tests. Via an interactive viewer you can see what lines are and aren't covered. This used to be annoying to set up by Vitest just does it for you.

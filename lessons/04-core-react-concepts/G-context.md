@@ -1,3 +1,16 @@
+---
+description: >-
+  Learn how to create a dynamic cart indicator in React using context for state
+  management, avoiding prop drilling and simplifying global state handling in a
+  React application. Understand the implementation of contexts in React to
+  maintain shopping cart state across different components seamlessly.
+keywords:
+  - React
+  - context
+  - cart indicator
+  - state management
+  - prop drilling
+---
 Let's make a cart indicator on the top right of the page. Create a file called Header.jsx and put this in there.
 
 ```javascript

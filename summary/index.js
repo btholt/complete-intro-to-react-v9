@@ -1,19 +1,19 @@
-import { ChatGPTAPI } from "chatgpt";
+import OpenAI from "openai";
 import matter from "gray-matter";
 import "dotenv/config";
 import fs from "fs/promises";
 import { getLesson, getLessons } from "../data/lesson.js";
-import getPrompt from "./getPrompt.js";
+import { zodResponseFormat } from "openai/helpers/zod";
+import getPrompt from "./getSystemPrompt.js";
 import assert from "assert";
+import { z } from "zod";
+
+const openai = new OpenAI();
 
 assert(
   process.env.OPENAI_API_KEY,
   "OPENAI_API_KEY must exist. Either pass it in via the environment or define it in the .env file"
 );
-
-const api = new ChatGPTAPI({
-  apiKey: process.env.OPENAI_API_KEY,
-});
 
 async function exec() {
   const list = await getLessons();
@@ -35,8 +35,28 @@ async function summarize(section, lesson) {
     console.log(`⏺️ ${lesson.fullSlug}`);
   } else {
     try {
-      let res = await api.sendMessage(prompt);
-      const parsed = JSON.parse(res.text);
+      const completion = await openai.beta.chat.completions.parse({
+        model: "gpt-4o-2024-08-06",
+        messages: [
+          { role: "system", content: getPrompt() },
+          {
+            role: "user",
+            content: `The markdown content is: \n\n\n${rendered.markdown}`,
+          },
+        ],
+        response_format: zodResponseFormat(
+          z.object({
+            seoDescription: z.string(),
+            seoKeywords: z.array(z.string()),
+          }),
+          "lesson"
+        ),
+      });
+
+      const parsed = {
+        description: completion.choices[0].message.parsed.seoDescription,
+        keywords: completion.choices[0].message.parsed.seoKeywords,
+      };
 
       const newData = Object.assign({}, data, parsed);
       const contentToWrite = matter.stringify({ content, data: newData });
@@ -44,7 +64,8 @@ async function summarize(section, lesson) {
       await fs.writeFile(lesson.path, contentToWrite);
       console.log(`✅ ${lesson.fullSlug}`);
     } catch (e) {
-      console.error(`Error on ${lesson.path}, skipping`, e);
+      console.error(`❌ Error on ${lesson.path}, skipping`, e);
+      process.exit(1);
     }
   }
 }

@@ -1,5 +1,15 @@
 ---
-description: ""
+description: >-
+  Learn effective React testing strategies with an example of testing a Pizza
+  component using React Testing Library. Discover best practices for
+  user-centric testing, handling bugs, and maintaining your test suite for a
+  more reliable application.
+keywords:
+  - React testing
+  - Pizza component
+  - User-centric testing
+  - React Testing Library
+  - software testing
 ---
 
 Let's write our first test for Pizza.jsx. In general, here's my methodology for testing React:

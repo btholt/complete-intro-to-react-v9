@@ -1,5 +1,16 @@
 ---
-title: "Vitest UI"
+title: Vitest UI
+description: >-
+  Learn how to use Vitest UI for managing tests in your browser. This tool is
+  highly convenient for running individual tests repeatedly without the need for
+  a VS Code extension.
+keywords:
+  - Vitest UI
+  - npm
+  - testing
+  - web browser
+  - package.json
+  - Vitest
 ---
 
 Another fun little tool let's you use is [Vitest UI][ui]. It allows you to see and manage all your tests from the web browser. Let's add it.

@@ -1,5 +1,17 @@
 ---
-title: "ESLint"
+title: ESLint
+description: >-
+  Learn how to set up ESLint with Prettier in your JavaScript project to enforce
+  coding standards and automate code formatting. This guide includes
+  installation instructions, configuration tips, and highlights on transitioning
+  to ESLint's latest configuration format. It also touches on new tools like
+  Biome and Oxlint for improved performance.
+keywords:
+  - ESLint setup
+  - Prettier integration
+  - JavaScript linting
+  - coding standards
+  - Biome Oxlint
 ---
 
 On top of Prettier which takes of all the formatting, you may want to enforce some code styles which pertain more to usage: for example you may want to force people to never use `with` which is valid JS but ill advised to use. [ESLint][eslint] comes into play here. It will lint for this problems.

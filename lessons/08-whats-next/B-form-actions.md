@@ -1,3 +1,20 @@
+---
+description: >-
+  Learn how to upgrade your app to React 19 and simplify form actions in your
+  React components, including integration with Next.js and Remix for server
+  actions. Discover useful updates in handling form submissions, using the 'use
+  server' directive, and implementing the 'useFormData' hook to enhance
+  development in large codebases. Explore practical examples involving new
+  functionalities and convenience features for more efficient React programming.
+keywords:
+  - React 19
+  - form actions
+  - Next.js
+  - Remix
+  - useFormData
+  - server actions
+  - React upgrade
+---
 Okay, so let's actually upgrade our app to be React 19.
 
 > 🚨 Pay attention here, as you need to figure out which version of React to install.

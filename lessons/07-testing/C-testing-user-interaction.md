@@ -1,3 +1,16 @@
+---
+description: >-
+  This guide provides instructions on testing a Contact page using Vitest and
+  the vitest-fetch-mock utility, covering steps for form submission and API
+  testing. Learn how to set up test environments, mock API responses, and verify
+  submissions with React Query to ensure effective contact form functionality.
+keywords:
+  - Vitest testing
+  - contact form API
+  - React Query
+  - vitest-fetch-mock
+  - JavaScript testing
+---
 Let's test the Contact page. It has a nice, simple user interaction. User puts their information in, we submit to the API, and we show them a submitted header. Let's test all of that.
 
 First we need a helper function, vitest-fetch-mock. We don't _need_ it because Vitest can do it, but I think it just makes things easier.

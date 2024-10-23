@@ -1,3 +1,19 @@
+---
+description: >-
+  Discover essential skills for writing React professionally in this
+  comprehensive course, covering 95% of what you need for React development, and
+  explore further learning paths such as Intermediate React courses and Frontend
+  Masters. Enhance your capabilities with server-side rendering, Redux, and
+  more, plus gain hands-on practice by building your own applications.
+keywords:
+  - React
+  - Frontend Masters
+  - Intermediate React
+  - server-side rendering
+  - Redux
+  - Tailwind
+  - React course
+---
 Congratulations!! You did it!
 
 This is a lot material to take in, so congrats on sticking with it. Hopefully it was fun and maybe made you support your local pizzeria along the way!

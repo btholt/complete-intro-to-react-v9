@@ -1,5 +1,17 @@
 ---
-description: "An essential tool in any React developer's toolbox is the official React Dev Tools extension. Brian shows you how to install and use them."
+description: >-
+  Discover essential React developer tools including NODE_ENV for optimizing
+  development and production builds, utilizing Strict Mode for enhanced code
+  warnings, and harnessing React Dev Tools for efficient debugging and
+  performance optimization.
+keywords:
+  - React developer tools
+  - NODE_ENV
+  - Strict Mode
+  - React Dev Tools
+  - React debugging
+  - Vite.js
+  - React performance
 ---
 
 React has some really great tools to enhance your developer experience. We'll go over a few of them here.

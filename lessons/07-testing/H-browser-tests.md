@@ -1,3 +1,18 @@
+---
+description: >-
+  Discover the evolving process of browser-based testing with Vitest and
+  Playwright, offering efficient and reliable testing solutions for React
+  components. Learn to configure Vitest for both Node.js and browser
+  environments, and understand how to create effective tests using Playwright
+  for modern web applications. This guide is ideal for developers looking to
+  enhance testing strategies in JavaScript and browser environments.
+keywords:
+  - Vitest
+  - Playwright
+  - browser testing
+  - React testing
+  - JavaScript testing
+---
 > 🚨 This is experimental and very likely to change in the future. Consider this a sneak peak into what is coming, not what to do today.
 
 Vitest is beginning to support more deeply browser-based testing. To those of us that have been around long enough to remember Selenium, this may strike fear deep int your heart. But fear not! Browser-based testing tools have come so far along since then that it's both fast and reliable, in particular thanks to the Microsoft project [Playwright][playwright].

@@ -1,3 +1,20 @@
+---
+description: >-
+  Explore the key features of React 19, including 'use client' and 'use server'
+  directives for server-side and client-side rendering, advanced component
+  management, and enhancements like auto HTML header manipulation and browser
+  resource hints such as preload and preconnect. Stay updated with the latest
+  trends and ensure your React applications remain efficient and secure with
+  these new functionalities.
+keywords:
+  - React 19
+  - use client
+  - use server
+  - preload
+  - preconnect
+  - custom components
+  - server-side rendering
+---
 This course has been centered on version 18.3. The nice thing about React is that while they do make breaking changes, they are usually fairly intentional about it and do so sparingly. In other words, what you learned today will still be useful five years from now. You could take the version of the course I taught five years ago and still be pretty up to date on how to write React. In other words, despite the fact that React 19 is imminent (or perhaps even out by the time you read this), there's no need to panic. All the stuff they are adding will just complement what you have learned and not change it.
 
 Do keep an eye out for version 6 of my Intermediate React course. We will cover a lot of the React 19 features in that course.

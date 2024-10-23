@@ -1,5 +1,17 @@
 ---
-description: ""
+description: >-
+  Learn how to effectively test a custom React hook, usePizzaOfTheDay, with
+  testing libraries like Vitest and React Testing Library. This article explains
+  the testing process, including using a fake component and the renderHook
+  method, showcasing how to handle API responses and ensure your hook functions
+  correctly within your codebase.
+keywords:
+  - custom hooks
+  - React
+  - testing
+  - usePizzaOfTheDay
+  - React Testing Library
+  - Vitest
 ---
 
 Let's say we needs tests for our custom hook, usePizzaOfTheDay. Testing custom hooks is a bit of a trick because they are inherently tied to the internal workings of React: they can't be called outside of a component. So how we do we get around that? We fake a component! Make a file called usePizzaOfTheDay.test.jsx in our `__tests__` directory.

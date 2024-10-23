@@ -1,5 +1,15 @@
 ---
-description: "Brian teaches React without any frills: just you, some JavaScript, and the browser. No build step."
+description: >-
+  Learn how to build a simple React app from scratch without using JSX, Babel,
+  or Webpack. This step-by-step guide demonstrates creating a pizza ordering
+  system using pure JavaScript, React, and ReactDOM. Discover how to structure
+  your project with a focus on function components and rendering techniques.
+keywords:
+  - React
+  - JavaScript
+  - ReactDOM
+  - function components
+  - Web development
 ---
 
 Let's start by writing pure React. No compile step. No JSX. No Babel. No Webpack or Vite. Just some JavaScript on a page.

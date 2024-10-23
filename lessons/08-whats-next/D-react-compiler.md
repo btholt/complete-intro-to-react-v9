@@ -1,3 +1,21 @@
+---
+description: >-
+  Discover performance optimization techniques in React, including useMemo and
+  useCallback, and explore the revolutionary React Compiler that automatically
+  applies these optimizations for seamless application enhancement. Learn how to
+  integrate React Compiler with Babel in your Vite config, ensuring zero-effort
+  performance gains in your React applications. Watch Lauren Tan's insightful
+  talk at React Conf 2024 for an in-depth understanding of React Compiler's
+  capabilities.
+keywords:
+  - React Compiler
+  - useMemo
+  - useCallback
+  - React optimization
+  - Babel plugin
+  - React performance
+  - Lauren Tan
+---
 We didn't talk much at all about performance hacks with React but there are a few. Generally speaking, React is in its "unoptimized" state is fast enough and adding these performance hacks on top make shave a millisecond here or there off, but in general aren't worth doing unless it's a big gain because it makes it harder to code with.
 
 Specifically I'm talking about [useMemo][memo] and [useCallback][callback]. These two tools allow you to control when React will re-render your app. If you're rendering a massive spreadsheet and it's not changing frequently but its parent is, you can use useMemo to say "hey, this doesn't need to re-render unless this condition is true". This only really helps when it's a big thing like this. I don't even teach this in this course because you use it very infrequently and some newer devs get tempted to use it all the time. It will make it hard later to understand why some things are rendering and some aren't. It makes bugs harder to find.

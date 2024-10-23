@@ -1,3 +1,17 @@
+---
+description: >-
+  Learn how to create a contact page using React with TanStack Query for
+  handling form submissions, using uncontrolled forms for state management, and
+  setting up API mutations for processing contact information. This tutorial
+  simplifies implementing post requests and showcases the process through a
+  practical example.
+keywords:
+  - React
+  - TanStack Query
+  - uncontrolled forms
+  - contact page
+  - API mutations
+---
 We are now going to do a contact page for our site. As part of that, we will accept a name, email, and message from our users and submit it our backend. Like all good backends, ours will log it to the console and then ignore it.
 
 We are going to see two new concepts here: how to do a post with TanStack Query (which they call a mutation) and how to do uncontrolled forms with React. Let's start with our API query. In src/api, create a file called postContact.js and put this in there.

@@ -1,3 +1,17 @@
+---
+description: >-
+  Learn how to set up your development environment for a Node.js course using
+  tools like Visual Studio Code, Firefox, and zsh with helpful extensions and
+  themes like Dracula and Starship Prompt. This guide recommends using Node.js
+  version 20.6 or later and offers insights into managing versions with fnm,
+  while also sharing tips on fonts and terminal settings.
+keywords:
+  - Node.js
+  - Visual Studio Code
+  - Firefox
+  - zsh
+  - Starship Prompt
+---
 ## Node.js
 
 You'll need to have a Node.js version installed, and preferably something after v20.6. I wrote this course with 20.16 but it should be fairly future-proof.

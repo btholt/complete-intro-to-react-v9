@@ -1,5 +1,16 @@
 ---
-description: ""
+description: >-
+  Discover how to set up and use Vitest for testing React applications, offering
+  a seamless testing environment that mimics your app's build pipeline. This
+  guide provides a step-by-step introduction to configure Vitest and explores
+  its benefits over traditional tools like Jest for creating efficient React
+  test setups.
+keywords:
+  - React testing
+  - Vitest setup
+  - React test configuration
+  - Vitest vs Jest
+  - React testing library
 ---
 
 This is meant to be a very brief treatise on how to do testing on React applications. This will be a brief intro on how to set up Vitest tests for the application we just created.

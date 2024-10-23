@@ -1,5 +1,19 @@
 ---
-title: "npm"
+title: npm
+description: >-
+  Discover the essentials of npm, the package manager for Node.js, including how
+  it facilitates the integration of open source modules into your projects and
+  the setup process with 'npm init'. Explore alternatives like pnpm, which
+  offers a different approach to organizing node_modules. Learn the key
+  differences between npm and pnpm to choose the best option for your
+  development needs.
+keywords:
+  - npm
+  - Node.js package manager
+  - pnpm
+  - npm install
+  - package.json
+  - node_modules
 ---
 
 npm does not stand for Node.js Package Manager. It is, however, the package manager for Node.js. (They don't say what it stands for.) It also has all the packages in the front end scene. npm makes a command line tool, called `npm` as well. `npm` allows you to bring in code from the npm registry which is a bunch of open source modules that people have written so you can use them in your project. Whenever you run `npm install react` (don't do this yet), it will install the latest version of React from the registry.

@@ -1,3 +1,17 @@
+---
+description: >-
+  Learn how to implement a React portal to render modals outside your main app
+  DOM, using a step-by-step guide with detailed code examples. Discover how to
+  use createPortal, useRef, and React Query for managing state and data
+  fetching. Ideal for developers looking to enhance user interfaces with dynamic
+  modals and contextual displays.
+keywords:
+  - React portal
+  - modal rendering
+  - createPortal
+  - useRef
+  - React Query
+---
 What if you are rendering a page and you want to render something in another part of the page at the same time? Think like you have a contextual right navigation and you have a page that wants to render into the contextual nav. We could use something like context to do that and that would be totally acceptable. But there's another cool way called a portal to do this as well. It even lets us render outside our app totally, like we're about to do.
 
 We're going to do a modal or a "popover". I think these are bad user experiences but it's a perfect use case for a portal so we're going to do it! In our case, because we want the modal to render in front of everything, we need the div that the modal renders into to be first in the DOM. So let's go make a div that does that. Open your index.html file and put this in there.

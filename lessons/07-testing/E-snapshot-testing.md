@@ -1,5 +1,17 @@
 ---
-description: ""
+description: >-
+  This document discusses the limitations and potential misuse of striving for
+  100% test coverage, and introduces snapshot testing as a cost-effective method
+  for UI testing. It includes examples of using snapshot tests with React
+  components, highlighting their low confidence and low cost as a quick check to
+  detect changes over time, while also noting the potential pitfalls and niche
+  applications in backend API testing.
+keywords:
+  - test coverage
+  - snapshot testing
+  - UI testing
+  - React testing
+  - Vitest
 ---
 
 I'm not a fan of seeking 100% test coverage. I think it's a fool's errand and a waste of time. I'd rather you write five tests that cover the most important five lines of your code than see you write one test for five less-important pieces of UI code.

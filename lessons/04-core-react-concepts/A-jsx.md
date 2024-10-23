@@ -1,6 +1,14 @@
 ---
-title: "JSX"
-description: "JSX is an essential part of writing React. Brian teaches you to leverage your newfound React knowledge and make it much easier to read with JSX"
+description: >-
+  Learn how JSX simplifies React development by translating HTML-like syntax
+  into React.createElement calls, and explore the integration of JSX with ESLint
+  rules and a Fastify API for enhanced code readability and functionality.
+keywords:
+  - React
+  - JSX
+  - ESLint
+  - Fastify
+  - frontend
 ---
 
 So far we've been writing React without JSX, something that I don't know anyone that actually does with their apps. _Everyone_ uses JSX. I show you this way so what JSX is actually doing is demystified to you. It doesn't do hardly anything. It just makes your code a bit more readable.

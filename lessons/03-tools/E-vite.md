@@ -1,3 +1,18 @@
+---
+description: >-
+  Learn how to use Vite, a fast build tool preferred by the React community, for
+  efficient development by integrating external libraries and optimizing code.
+  This guide covers installation, configuration, and setting up Vite for React
+  projects, presenting it as a modern alternative to tools like Parcel and
+  Webpack.
+keywords:
+  - Vite
+  - React
+  - build tool
+  - JavaScript
+  - frontend development
+  - code optimization
+---
 The build tool we are going to be using today is called [Vite][vite]. Vite (pronounced "veet", meaning quick in French) is a tool put out by the Vue team that ultimately ends up wrapping [Rollup][rollup] which does the actual bundling. The end result is a tool that is both easy to use and produces a great end result.
 
 > Fun fact: there's a new project being developed called [Rolldown][rolldown] which is written in Rust and aims to replace Rollup.

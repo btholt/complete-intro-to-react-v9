@@ -1,5 +1,18 @@
 ---
-title: "TanStack Query"
+title: TanStack Query
+description: >-
+  Learn how to create a past orders page using React and TanStack Query for
+  efficient API interaction, enhancing your developer experience with cleaner,
+  bug-free code. This guide covers installing React Query, setting up ESLint
+  configurations, and utilizing hooks for paginated data fetching and caching.
+  Discover how TanStack Query simplifies asynchronous API calls while improving
+  application performance and readability.
+keywords:
+  - React Query
+  - TanStack
+  - API calls
+  - ESLint
+  - data fetching
 ---
 
 Let's make make a past orders page. Create a new file, `past.lazy.jsx`. If your Vite server is already running, it will automatically stub it out for you! Pretty cool developer experience from TanStack.
