@@ -1,15 +1,16 @@
 ---
 description: >-
-  Learn how to create custom React hooks for composability, focusing on a
-  practical example of building a "Pizza of the Day" feature using the
-  usePizzaOfTheDay custom hook to efficiently handle API requests and data
-  separation in components.
+  Learn about creating custom hooks in React with Brian Holt's Complete Intro to
+  React, covering how to build and integrate a custom hook for fetching pizza of
+  the day using React hooks for effective separation and testability. Brian
+  demonstrates building a component and using debug tools to inspect React
+  custom hooks efficiently.
 keywords:
-  - React hooks
   - custom hooks
-  - Pizza of the Day
-  - API requests
-  - component logic
+  - React hooks
+  - Brian Holt
+  - pizza of the day
+  - debug value
 ---
 One thing that's pretty special about hooks is their composability. You can use hooks to make other hooks! People tend to call these custom hooks. There are even people who go as far to say "never make an API request in a component, always do it in a hook." I don't know if I'm as hardcore as that but I see the logic in it. If you make a custom hook for those sorts of things they become individually testable and do a good job to separate your display of data and your logic to acquire data. I'm more in the camp of make custom hooks for either complicated logic or reusable logic, but for simple cases it's okay to keep things simple.
 

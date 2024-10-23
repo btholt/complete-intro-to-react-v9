@@ -1,16 +1,17 @@
 ---
 description: >-
-  Learn how to implement a React portal to render modals outside your main app
-  DOM, using a step-by-step guide with detailed code examples. Discover how to
-  use createPortal, useRef, and React Query for managing state and data
-  fetching. Ideal for developers looking to enhance user interfaces with dynamic
-  modals and contextual displays.
+  Learn how to implement a React modal using portals for rendering components
+  outside the main app structure in Brian Holt's "Complete Intro to React." This
+  guide covers use of React Query for asynchronous data management and
+  demonstrates best practices in creating user interface elements like modals to
+  improve web development skills. Ideal for React developers seeking practical
+  experience with advanced rendering techniques and API integration.
 keywords:
-  - React portal
-  - modal rendering
-  - createPortal
-  - useRef
+  - React modals
+  - portals
   - React Query
+  - web development
+  - Brian Holt
 ---
 What if you are rendering a page and you want to render something in another part of the page at the same time? Think like you have a contextual right navigation and you have a page that wants to render into the contextual nav. We could use something like context to do that and that would be totally acceptable. But there's another cool way called a portal to do this as well. It even lets us render outside our app totally, like we're about to do.
 

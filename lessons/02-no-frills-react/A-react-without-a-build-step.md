@@ -1,15 +1,18 @@
 ---
 description: >-
-  Learn how to build a simple React app from scratch without using JSX, Babel,
-  or Webpack. This step-by-step guide demonstrates creating a pizza ordering
-  system using pure JavaScript, React, and ReactDOM. Discover how to structure
-  your project with a focus on function components and rendering techniques.
+  Learn the basics of creating a simple React app without using tools like Babel
+  or Webpack. This tutorial guides you through setting up a project directory,
+  writing pure JavaScript with React, and creating components to build a pizza
+  ordering system. Ideal for beginners, this step-by-step guide by Brian Holt
+  from the Complete Intro to React v9 course helps you understand fundamental
+  React concepts using only essential tools.
 keywords:
   - React
   - JavaScript
-  - ReactDOM
-  - function components
-  - Web development
+  - tutorial
+  - beginner
+  - Brian Holt
+  - web development
 ---
 
 Let's start by writing pure React. No compile step. No JSX. No Babel. No Webpack or Vite. Just some JavaScript on a page.

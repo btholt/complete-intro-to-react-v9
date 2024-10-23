@@ -6,7 +6,16 @@ import { getLesson, getLessons } from "../data/lesson.js";
 import { zodResponseFormat } from "openai/helpers/zod";
 import getPrompt from "./getSystemPrompt.js";
 import assert from "assert";
+import path from "path";
 import { z } from "zod";
+
+const args = process.argv.slice(2);
+const force = args.includes("--force");
+
+const configBuffer = await fs.readFile(
+  path.join(process.cwd(), "./course.json")
+);
+const config = JSON.parse(configBuffer);
 
 const openai = new OpenAI();
 
@@ -27,18 +36,17 @@ async function exec() {
 
 async function summarize(section, lesson) {
   const rendered = await getLesson(section.slug, lesson.slug);
-  const prompt = getPrompt(rendered.markdown);
   const file = await fs.readFile(lesson.path);
   const { data, content } = matter(file.toString());
 
-  if (data.description) {
+  if (data.description && !force) {
     console.log(`⏺️ ${lesson.fullSlug}`);
   } else {
     try {
       const completion = await openai.beta.chat.completions.parse({
         model: "gpt-4o-2024-08-06",
         messages: [
-          { role: "system", content: getPrompt() },
+          { role: "system", content: getPrompt(config) },
           {
             role: "user",
             content: `The markdown content is: \n\n\n${rendered.markdown}`,

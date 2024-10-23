@@ -1,16 +1,18 @@
 ---
 description: >-
-  Discover how ESLint and Prettier simplify code quality maintenance, helping
-  developers focus on architecture instead of syntax. Learn about integrating
-  Prettier in your workflow, setting configurations in Visual Studio Code, and
-  using npm scripts for effortless code formatting.
+  Learn how to maintain high code quality with Prettier by James Long, a
+  powerful tool for consistent code formatting. Discover easy integration
+  methods and how to use Prettier with Visual Studio Code to streamline your
+  development process, as well as setup instructions for npm scripts in this
+  guide from Brian Holt's Complete Intro to React course.
 keywords:
   - Prettier
-  - ESLint
   - code quality
-  - code formatting
-  - npm scripts
+  - ESLint
+  - Brian Holt
+  - React development
   - Visual Studio Code
+  - npm scripts
 ---
 It's important to keep quality high when writing code. Or at least that's how I sell ESLint and Prettier to my co-workers. In reality I'm super lazy and want the machine to do as much work as possible so I can focus more on architecture and problem-solving and less on syntax and style. While there are many tools that can help you keep code quality high, these two I consider core to my workflow.
 

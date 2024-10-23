@@ -1,19 +1,17 @@
 ---
 description: >-
-  Discover the Complete Intro to React, version 9, a comprehensive course
-  designed by Brian Holt to take you from beginner to job-ready in React
-  development. Learn essential React concepts, tools like Vite, JSX, and
-  ecosystem integration at your own pace, with guidance on using GitHub for
-  collaborative learning and support. Ideal for anyone looking to enhance their
-  React skills, this course offers practical, real-world experience from a
-  seasoned developer.
+  Join Brian Holt in "Complete Intro to React, v9," a beginner-friendly course
+  that equips you with essential React skills using a first-principles approach,
+  incorporating tools like Vite and JSX, making you job-ready in the React
+  ecosystem.
 keywords:
-  - React course
-  - React tutorial
-  - learn React
   - Brian Holt
-  - React development
-  - React tools
+  - React
+  - web development
+  - javascript
+  - frontend
+  - Vite
+  - JSX
 ---
 > 🚨 You do not need to watch/read previous versions of this course. This is just the ninth revision of the course.
 

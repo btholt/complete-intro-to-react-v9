@@ -12,7 +12,7 @@
     "twitter": "holtbt",
     "bluesky": "brianholt.me"
   },
-  "description": "Learn how to make amazing web apps with React with Brian Holt as taught for Frontend Masters!",
+  "description": "Discover the Complete Intro to React, version 9, a comprehensive course designed by Brian Holt to take you from beginner to job-ready in React development. Learn essential React concepts, tools like Vite, JSX, and ecosystem integration at your own pace, with guidance on using GitHub for collaborative learning and support. Ideal for anyone looking to enhance their React skills, this course offers practical, real-world experience from a seasoned developer.",
   "keywords": [
     "Brian Holt",
     "React",
@@ -23,7 +23,8 @@
     "web development",
     "javascript",
     "frontend",
-    "front end"
+    "front end",
+    "testing"
   ],
   "csvPath": "./out/lessons.csv"
 }

@@ -1,15 +1,18 @@
 ---
 description: >-
-  Learn how to manage a user’s shopping cart and handle order submission by
-  modifying an Order component in React. This tutorial guides you through
-  importing necessary hooks, formatting prices, and creating a Cart display to
-  facilitate seamless checkout functionality.
+  Learn how to handle user cart submissions and checkout process in React with
+  Brian Holt's Complete Intro to React, v9. Build a shopping cart component
+  using Order.jsx and Cart.jsx, manage cart state with hooks, and implement
+  server-side checkout functionality efficiently. Ideal for React developers
+  seeking practical, hands-on experience in web development.
 keywords:
-  - React hooks
+  - React
   - shopping cart
-  - order submission
-  - Cart component
-  - checkout process
+  - checkout
+  - Brian Holt
+  - Order.jsx
+  - Cart.jsx
+  - web development
 ---
 So now we want to be able to handle the user's cart and submitting our order. Let's go add what we need to Order.jsx
 

@@ -1,18 +1,15 @@
 ---
 description: >-
-  Learn how to upgrade your app to React 19 and simplify form actions in your
-  React components, including integration with Next.js and Remix for server
-  actions. Discover useful updates in handling form submissions, using the 'use
-  server' directive, and implementing the 'useFormData' hook to enhance
-  development in large codebases. Explore practical examples involving new
-  functionalities and convenience features for more efficient React programming.
+  Learn how to upgrade your application to React 19 and simplify form handling
+  in this segment of Brian Holt’s Complete Intro to React, version 9. Discover
+  new React form actions, "use server" directives for server-side logic, and
+  useFormData hooks to manage input states effectively. Ideal for React
+  developers seeking practical techniques to streamline their web applications.
 keywords:
   - React 19
   - form actions
-  - Next.js
-  - Remix
   - useFormData
-  - server actions
+  - Brian Holt
   - React upgrade
 ---
 Okay, so let's actually upgrade our app to be React 19.

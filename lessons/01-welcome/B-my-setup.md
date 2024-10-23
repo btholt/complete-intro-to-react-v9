@@ -1,15 +1,16 @@
 ---
 description: >-
-  Learn how to set up your development environment for a Node.js course using
-  tools like Visual Studio Code, Firefox, and zsh with helpful extensions and
-  themes like Dracula and Starship Prompt. This guide recommends using Node.js
-  version 20.6 or later and offers insights into managing versions with fnm,
-  while also sharing tips on fonts and terminal settings.
+  Explore essential tools and configurations for the "Complete Intro to React
+  v9" course by Brian Holt, including recommended Node.js version, Visual Studio
+  Code setup with extensions, and terminal preferences for optimal React
+  development experience. Learn about the use of tools like fnm for Node.js,
+  Starship Prompt, MonoLisa font, and more within this comprehensive React
+  course.
 keywords:
+  - Brian Holt
+  - React
   - Node.js
   - Visual Studio Code
-  - Firefox
-  - zsh
   - Starship Prompt
 ---
 ## Node.js

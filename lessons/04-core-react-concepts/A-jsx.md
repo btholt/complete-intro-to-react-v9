@@ -1,14 +1,18 @@
 ---
 description: >-
-  Learn how JSX simplifies React development by translating HTML-like syntax
-  into React.createElement calls, and explore the integration of JSX with ESLint
-  rules and a Fastify API for enhanced code readability and functionality.
+  Explore the integration of JSX in React applications with Brian Holt's
+  "Complete Intro to React, v9" course, as it simplifies HTML tags into
+  React.createElement calls, enhancing code readability. Learn about configuring
+  ESLint for JSX, React components, and Vite server setup for a complete React
+  development experience.
 keywords:
   - React
   - JSX
-  - ESLint
-  - Fastify
+  - Brian Holt
   - frontend
+  - JavaScript
+  - web development
+  - Vite
 ---
 
 So far we've been writing React without JSX, something that I don't know anyone that actually does with their apps. _Everyone_ uses JSX. I show you this way so what JSX is actually doing is demystified to you. It doesn't do hardly anything. It just makes your code a bit more readable.

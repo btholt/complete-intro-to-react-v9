@@ -1,16 +1,19 @@
 ---
 title: Vitest UI
 description: >-
-  Learn how to use Vitest UI for managing tests in your browser. This tool is
-  highly convenient for running individual tests repeatedly without the need for
-  a VS Code extension.
+  Learn how to use Vitest UI, an efficient tool for managing tests in your
+  browser, by adding it to your project with simple npm commands. Enhance your
+  React development skills by integrating browser-based testing with Vitest for
+  convenient module graph visualization and individual test management. Ideal
+  for developers seeking practical tools within the Complete Intro to React
+  course by Brian Holt.
 keywords:
   - Vitest UI
+  - React testing
+  - Brian Holt
   - npm
-  - testing
-  - web browser
-  - package.json
-  - Vitest
+  - module graph
+  - React development
 ---
 
 Another fun little tool let's you use is [Vitest UI][ui]. It allows you to see and manage all your tests from the web browser. Let's add it.

@@ -1,15 +1,17 @@
 ---
 description: >-
-  Learn how to implement API requests in a React app using the `useEffect` hook
-  to fetch initial data, such as a list of pizzas, and manage state with hooks
-  like `useState`. This guide focuses on component lifecycles, data
-  dependencies, and optimal rendering practices to improve app performance.
+  In this section of the Complete Intro to React v9 course by Brian Holt, learn
+  how to use the `useEffect` hook to make API requests for initializing a list
+  of pizzas, manage UI initial load with loading states, and optimize component
+  updates using unique keys for rendering efficiency. Enhance your React
+  projects with best practices for asynchronous data fetching and component
+  optimization.
 keywords:
-  - React
-  - useEffect
+  - React useEffect
   - API requests
-  - React hooks
-  - state management
+  - React loading state
+  - React component optimization
+  - Brian Holt
 ---
 
 We have enough of an app to start making some API requests now. We want the app to request an initial set of pets on initial load of the page. So let's make that happen using a special hook called `useEffect`. `useEffect` allows you to say do a render of this component first so the user can see _something_ then as soon as the render is done, _then_ do something (the something here being an effect). In our case, we want the user to see our UI first then we want to make a request to the API so we can initialize a list of pizzas.

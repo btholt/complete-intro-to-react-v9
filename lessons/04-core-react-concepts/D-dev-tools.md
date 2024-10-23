@@ -1,17 +1,16 @@
 ---
 description: >-
-  Discover essential React developer tools including NODE_ENV for optimizing
-  development and production builds, utilizing Strict Mode for enhanced code
-  warnings, and harnessing React Dev Tools for efficient debugging and
-  performance optimization.
+  Explore essential React development tools including NODE_ENV, Strict Mode, and
+  React Dev Tools to enhance debugging, optimize performance, and maintain
+  modern coding practices. Brian Holt's Complete Intro to React v9 offers
+  practical insights into these tools for effective frontend development with
+  Vite.js.
 keywords:
-  - React developer tools
+  - React tools
   - NODE_ENV
   - Strict Mode
   - React Dev Tools
-  - React debugging
-  - Vite.js
-  - React performance
+  - Brian Holt
 ---
 
 React has some really great tools to enhance your developer experience. We'll go over a few of them here.

@@ -1,20 +1,17 @@
 ---
 description: >-
-  Discover performance optimization techniques in React, including useMemo and
-  useCallback, and explore the revolutionary React Compiler that automatically
-  applies these optimizations for seamless application enhancement. Learn how to
-  integrate React Compiler with Babel in your Vite config, ensuring zero-effort
-  performance gains in your React applications. Watch Lauren Tan's insightful
-  talk at React Conf 2024 for an in-depth understanding of React Compiler's
-  capabilities.
+  Learn about performance optimization in React with tools like useMemo and
+  useCallback, and discover how the React Compiler can automate these
+  optimizations for you. This guide provides practical steps for integrating
+  React Compiler into your development workflow, ensuring improved performance
+  with minimal effort.
 keywords:
   - React Compiler
+  - React performance
   - useMemo
   - useCallback
-  - React optimization
-  - Babel plugin
-  - React performance
-  - Lauren Tan
+  - optimization
+  - React development
 ---
 We didn't talk much at all about performance hacks with React but there are a few. Generally speaking, React is in its "unoptimized" state is fast enough and adding these performance hacks on top make shave a millisecond here or there off, but in general aren't worth doing unless it's a big gain because it makes it harder to code with.
 

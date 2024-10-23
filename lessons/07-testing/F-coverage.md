@@ -1,17 +1,19 @@
 ---
 description: >-
-  Learn how to effectively utilize Vitest's built-in V8 code coverage tool to
-  measure test coverage in your code with simple setup instructions, including
-  script configuration for automated coverage reports. Discover how to identify
-  missing test coverage areas using an interactive viewer and consider using
-  Istanbul for alternative reporting. Enhance your testing strategy today!
+  Learn how to enhance your React test coverage with Vitest and v8 in the
+  Complete Intro to React v9 course by Brian Holt. This guide explains setting
+  up Chrome's built-in test coverage tool, v8, to visualize code coverage and
+  improve your test effectiveness, with alternative support for Istanbul.
+  Perfect for React developers aiming to optimize their testing strategies.
 title: v8
 keywords:
+  - React
   - Vitest
-  - V8
+  - v8
   - test coverage
+  - Brian Holt
   - Istanbul
-  - code testing
+  - frontend development
 ---
 
 One last very cool trick that Vitest has built into it: [v8][v8]. v8 uses Chrome's builtin test coverage tool which tells you _how much_ of your code that you're covering with tests. Via an interactive viewer you can see what lines are and aren't covered. This used to be annoying to set up by Vitest just does it for you.

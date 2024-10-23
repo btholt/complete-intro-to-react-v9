@@ -1,15 +1,18 @@
 ---
 description: >-
-  Learn effective React testing strategies with an example of testing a Pizza
-  component using React Testing Library. Discover best practices for
-  user-centric testing, handling bugs, and maintaining your test suite for a
-  more reliable application.
+  Learn how to effectively test React components with a focus on functionality
+  over implementation using React Testing Library, through this hands-on guide
+  by Brian Holt. Gain insights into user-centric testing methodologies, writing
+  bug-catching tests, and managing test lifecycle for enhanced app reliability,
+  specifically applied to the Pizza.jsx component.
 keywords:
-  - React testing
-  - Pizza component
-  - User-centric testing
-  - React Testing Library
-  - software testing
+  - React Testing
+  - React
+  - Vitest
+  - Testing Library
+  - React Components
+  - Brian Holt
+  - Pizza.jsx
 ---
 
 Let's write our first test for Pizza.jsx. In general, here's my methodology for testing React:

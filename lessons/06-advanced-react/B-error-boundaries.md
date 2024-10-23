@@ -1,16 +1,20 @@
 ---
 description: >-
-  Learn how to effectively handle errors in React using Error Boundaries with
-  class components, which are crucial for catching API errors and 404s when you
-  cannot use hooks. Discover best practices and how to implement error
-  boundaries to improve your React application's resilience against malformed
-  data.
+  Learn how to use class components and error boundaries in React development
+  with Brian Holt's "Complete Intro to React, v9" course. Understand the
+  transition from function components to class components for error handling and
+  gain insights into managing API errors using techniques like
+  `componentDidCatch`. Ideal for developers navigating legacy React codebases or
+  dealing with API errors, this course offers practical skills to improve your
+  React applications.
 keywords:
-  - React Error Boundaries
-  - API errors
-  - React class components
-  - componentDidCatch
-  - React Error Handling
+  - React error boundaries
+  - class components
+  - API error handling
+  - React development
+  - Brian Holt
+  - legacy React
+  - Complete Intro to React
 ---
 Frequently there's errors with APIs with malformatted or otherwise weird data. Let's be defensive about this because we still want to use this API but we can't control when we get errors. We're going to use a feature called `componentDidCatch` to handle this. This is something you can't do with hooks so if you needed this sort of functionality you'd have to use a class component.
 

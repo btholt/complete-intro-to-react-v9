@@ -1,18 +1,16 @@
 ---
 description: >-
-  Discover essential skills for writing React professionally in this
-  comprehensive course, covering 95% of what you need for React development, and
-  explore further learning paths such as Intermediate React courses and Frontend
-  Masters. Enhance your capabilities with server-side rendering, Redux, and
-  more, plus gain hands-on practice by building your own applications.
+  Congratulations on completing the Complete Intro to React v9 course by Brian
+  Holt! You're ready to develop React applications professionally, with skills
+  applicable to real-world tech jobs. Consider advancing your knowledge with
+  Intermediate React v5, exploring server-side React techniques, or diving into
+  hands-on projects to solidify your understanding.
 keywords:
   - React
-  - Frontend Masters
-  - Intermediate React
-  - server-side rendering
-  - Redux
-  - Tailwind
   - React course
+  - Brian Holt
+  - Intermediate React
+  - React development
 ---
 Congratulations!! You did it!
 

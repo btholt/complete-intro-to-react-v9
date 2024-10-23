@@ -1,17 +1,16 @@
 ---
 title: TanStack Router
 description: >-
-  Learn how to implement TanStack Router for client-side routing in your React
-  app, offering an alternative to React Router with a focus on lazy loading and
-  file-based conventions for efficient navigation management. Understand the
-  benefits of using TanStack's Router-DevTools and how to maintain state across
-  pages using Context API.
+  Discover how to implement routing in React using TanStack Router with insights
+  from Brian Holt's Complete Intro to React v9. Learn about client-side focused
+  routing solutions, file-based route generation, and lazy loading techniques to
+  optimize your React applications.
 keywords:
+  - React
   - TanStack Router
-  - React routing
-  - client-side routing
-  - React Router alternative
-  - lazy loading
+  - routing
+  - client-side
+  - Brian Holt
 ---
 
 So now we have arrived to the point where we want multiple pages in our app. We need some sort of router tool to accomplish that. We _could_ just work with the browser's history API to do it but there so many ways to get it wrong, plus we are spoiled for choice when it comes to great React routing libraries.

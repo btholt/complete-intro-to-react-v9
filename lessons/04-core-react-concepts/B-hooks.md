@@ -1,15 +1,17 @@
 ---
 description: >-
-  Learn how to create a pizza order form using React with interactive elements
-  like dropdowns and radio buttons controlled by hooks for managing state,
-  offering insights into controlled and uncontrolled forms.
+  Learn how to create an interactive form in React with useState hooks, allowing
+  users to add pizzas to their order in this detailed coding guide from the
+  "Complete Intro to React, v9" course by Brian Holt. Explore concepts like
+  controlled inputs, JSX syntax, event handling, and the importance of state
+  management in React development. Enhance your web development skills with
+  practical React examples and create dynamic applications effectively.
 keywords:
-  - React hooks
-  - pizza order form
-  - controlled form
-  - uncontrolled form
-  - useState
-  - React input handling
+  - React tutorial
+  - useState hooks
+  - controlled inputs
+  - web development
+  - Brian Holt
 ---
 
 Okay, so now we want to make it so people can add pizzas to their order. We need a little form that allows them to select the pizza and the size. Create a new file called Order.jsx and add the following:
