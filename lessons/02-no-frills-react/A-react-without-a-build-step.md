@@ -17,31 +17,29 @@ keywords:
 
 Let's start by writing pure React. No compile step. No JSX. No Babel. No Webpack or Vite. Just some JavaScript on a page.
 
-Let's start your project. Create your project directory. I'm going to call mine `pizza` since we're going to be building a pizza ordering system throughout this course. Create an index.html and put it into a `src/` directory inside of your project folder. In index.html put:
+Let's start your project. Create your project directory inside the repo. I'm going to call mine `pizza` since we're going to be building a pizza ordering system throughout this course. Open that directory in VS Code or your editor of choice. Create an index.html and add this markup:
 
-```javascript
+```html
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Padre Gino's</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="./style.css">
-  <title>Adopt Me</title>
-</head>
-
-<body>
-  <div id="root">not rendered</div>
-  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js"></script>
-  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js"></script>
-  <script src="./src/App.js"></script>
-</body>
-
+  <body>
+    <div id="root">not rendered</div>
+    <script src="https://unpkg.com/react@18.3.1/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js"></script>
+    <script src="./src/App.js"></script>
+  </body>
 </html>
 ```
 
-Let's run this. We could open it directly in our browser but I like using [serve][serve]. Run `npx serve` and open localhost:3000 in your browser.
+Let's run this. We could open it directly in our browser but I like using [serve][serve]. Run `npx serve` and open [http://localhost:3000/]() in your browser.
 
 - Pretty standard HTML5 document. If this is confusing, I teach another course called [Intro to Web Dev][webdev] that can help you out.
 - We're adding a root div. We'll render our React app here in a sec. It doesn't _have_ to be called root, just a common practice.
@@ -52,7 +50,7 @@ Let's run this. We could open it directly in our browser but I like using [serve
 
 > Let's add some style! [Click here][style] to get the stylesheet for this course. Make a file called style.css in src/ and paste the previous file there. If you follow along with the course and use the same class names, the styles will be applied for you automatically. This isn't a course on CSS so I make no assertion it's any good!
 
-Make a new directory calle src and a new file called App.js in that directory and put this in there.
+Make a new directory called `src` and a new file called `App.js` in that directory and put this in there.
 
 ```javascript
 const App = () => {
@@ -83,5 +81,5 @@ This is about the simplest React app you can build.
 > ReactDOM.createRoot is a new API as of React v18. The old `ReactDOM.render` is still available (and deprecated) but it'll render your app in "legacy" mode which won't use all the fun new features packed into React v18
 
 [webdev]: https://frontendmasters.com/courses/web-development-v3/
-[style]: https://raw.githubusercontent.com/btholt/citr-v9-project/master/01-no-frills-react/src/style.css
+[style]: https://github.com/btholt/citr-v9-project/blob/main/api/public/style.css
 [serve]: https://github.com/vercel/serve

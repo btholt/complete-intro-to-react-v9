@@ -13,15 +13,17 @@ keywords:
   - Brian Holt
 ---
 
+## ESLint
+
 On top of Prettier which takes of all the formatting, you may want to enforce some code styles which pertain more to usage: for example you may want to force people to never use `with` which is valid JS but ill advised to use. [ESLint][eslint] comes into play here. It will lint for this problems.
 
-First of all, run `npm install -D eslint@9.9.1 eslint-config-prettier@9.1.0 globals@15.9.0` to install eslint in your project development dependencies. Then you may configure its functionalities.
+First of all, run `npm install -D eslint@9.9.1 eslint-config-prettier@9.1.0 globals@15.9.0` to install ESLint in your project development dependencies. Then you may configure it.
 
 There are dozens of preset configs for ESLint and you're welcome to use any one of them. The [Airbnb config][airbnb] is very popular, as is the standard config (both of which I taught in previous versions of this class). I'm going to use a looser one for this class: the recommended JS config from ESLint. Let's create an `eslint.config.mjs` file to start linting our project.
 
-> We're using .mjs (module JS) because we want to use import/export for modules instead of require/
+> We're using .mjs (module JS) because we want to use import/export for modules instead of require
 
-Create this file called `eslint.config.mjs`.
+Add this to the `eslint.config.mjs` file:
 
 ```js
 import js from "@eslint/js";
@@ -46,9 +48,9 @@ export default [
 ];
 ```
 
-- ESLint changed a lot with version 9. In previous versions of this course we did used the JSON version of configuration and that's no longer supported; you _have_ to do their newer "flat" version of config (honestly it is better.)
-- The `/** @type {import('eslint').Linter.Config[]} */` is a VS Code / TypeScript trick to be able to do autocompletions on the config object. Super helpful to have the types available right in VS Code. It's not required.
-- [globals][globals] is a package that is just a big JSON file of what's available in each environment. We're going to be in Node.js and Browser environments so we grabbed those two. If I was being a bit more discerning I'd carefully only apply browser configs to browser files and node configs to Node.js files.
+- ESLint changed a lot with version 9. In previous versions of this course we used the JSON version of configuration which is no longer supported. You _have_ to do their newer "flat" version of config (honestly it is better.)
+- The `/** @type {import('eslint').Linter.Config[]} */` is a VS Code / TypeScript trick to be able to do auto-completions on the config object. Super helpful to have the types available right in VS Code. It's not required.
+- [globals][globals] is a package that is just a big JSON file of what's available in each environment. We're going to be in Node.js and Browser environments so we grabbed those two. If I was being a bit more discerning I'd carefully only apply browser configs to browser files and Node configs to Node.js files.
 - The config objects are applied in order. We did ESLint's JS config first, and then our custom one so we can overwrite it where we want to, and then the Prettier one should always come last as all it does is turn off rules that Prettier itself does; it doesn't add anything.
 
 This is a combination of the recommended configs of ESLint and Prettier. This will lint for both normal JS stuff as well as JSX stuff. Run `npx eslint` now and you should see we have a few errors. Run it again with the `--fix` flag and see it will fix some of it for us! Go fix the rest of your errors and come back. Let's go add this to our npm scripts.
@@ -77,3 +79,4 @@ Two projects to watch going forward here: [Biome][biome] (formerly called Rome) 
 [vscode]: https://code.visualstudio.com/
 [biome]: https://biomejs.dev/
 [oxlint]: https://oxc.rs/docs/guide/usage/linter.html
+[globals]: https://www.npmjs.com/package/globals

@@ -14,7 +14,9 @@ keywords:
   - Brian Holt
 ---
 
-We have enough of an app to start making some API requests now. We want the app to request an initial set of pets on initial load of the page. So let's make that happen using a special hook called `useEffect`. `useEffect` allows you to say do a render of this component first so the user can see _something_ then as soon as the render is done, _then_ do something (the something here being an effect). In our case, we want the user to see our UI first then we want to make a request to the API so we can initialize a list of pizzas.
+## Effects
+
+We have enough of an app to start making some API requests now. We want the app to request an initial set of pizzaTypes on initial load of the page. So let's make that happen using a special hook called `useEffect`. `useEffect` allows you to say do a render of this component first so the user can see _something_ then as soon as the render is done, _then_ do something (the something here being an effect). In our case, we want the user to see our UI first then we want to make a request to the API so we can initialize a list of pizzas.
 
 > Make sure you have both your Vite dev server running _and_ your API server running. Both.
 
@@ -69,9 +71,8 @@ async function fetchPizzaTypes() {
 // replace <Pizza /> and button at the end
 ```
 
-- We're taking advantage of closures here that if we define the requestPets function _inside_ of the render that it will have access to that scope and can use all the hooks there.
 - We put all the logic for fetching pizza types in an async function to make it more readable. You can't make the function provided to useEffect async.
-- the `[]` at the end of the useEffect is where you declare your data dependencies. React wants to know _when_ to run that effect again. You don't give it data dependencies, it assumes any time any hook changes that you should run the effect again. This is bad because that would mean any time setPets gets called it'd re-run render and all the hooks again. See a problem there? It'd run infinitely since requestPets calls setPets.
+- the `[]` at the end of the useEffect is where you declare your data dependencies. React wants to know _when_ to run that effect again. You don't give it data dependencies, it assumes any time any hook changes that you should run the effect again. This is bad because that would mean any time setPizzaTypes gets called it'd re-run render and all the hooks again. See a problem there? It'd run infinitely since fetchPizzaTypes calls setPizzaTypes.
 - You can instead provide which hooks to watch for changes for. In our case, we actually only want it to run once, on creation of the component, and then to not run that effect again. (we'll do searching later via clicking the submit button) You can accomplish this only-run-on-creation by providing an empty array.
 - We're using a loading flag to only display data once it's ready. We'll use TanStack Query in a bit to make this code look cleaner. But this is how you do conditional showing/hiding of components in React.
 - The `key` portion is an interesting one. When React renders arrays of things, it doesn't know the difference between something is new and something is just being re-ordered in the array (think like changing the sorting of a results list, like price high-to-low and then priced low-to-high). Because of this, if you don't tell React how to handle those situations, it just tears it all down and re-renders everything anew. This can cause unnecessary slowness on devices. This is what key is for. Key tells React "this is a simple identifier of what this component is". If React sees you just moved a key to a different order, it will keep the component tree. So key here is to associate the key to something unique about that component. 99/100 this is a database ID of some variety. _Don't_ use the index of the array as that just isn't right unless the array is literally is never going to change order.

@@ -20,10 +20,10 @@ You are now fully equipped to write React professionally. Everything you learned
 
 So what should you do from here?
 
-- [Intermediate React v5][v5] is still very relevant! Take this course and learn more about Tailwind, server-side rendering, more hooks, Redux, and a bunch of ther cool things. I'll update this when the new Intermediate React v6 comes out.
+- [Intermediate React v5][v5] is still very relevant! Take this course and learn more about Tailwind, server-side rendering, more hooks, Redux, and a bunch of there cool things. I'll update this when the new Intermediate React v6 comes out.
 - [The rest of the Frontend Masters React learning path][path].
 - Build your own app!! I cannot stress how important it is with concepts like this to just build. Take the dumbest idea in your head and make it. Nothing can replace experience!
-  - An ecommerce website to sell single socks so you can match unmatched socks
+  - An e-commerce website to sell single socks so you can match unmatched socks
   - An AI prompt text editor
   - A music app that lets you add Spotify, Apple Music, and Tidal songs to it.
   - A client to let you read Thread, X, and Bluesky in the same app.

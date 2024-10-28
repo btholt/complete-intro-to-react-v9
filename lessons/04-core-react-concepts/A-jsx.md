@@ -16,7 +16,9 @@ keywords:
   - Vite
 ---
 
-So far we've been writing React without JSX, something that I don't know anyone that actually does with their apps. _Everyone_ uses JSX. I show you this way so what JSX is actually doing is demystified to you. It doesn't do hardly anything. It just makes your code a bit more readable.
+## JSX
+
+So far we've been writing React without JSX, something that I don't know anyone that actually does with their apps. _Everyone_ uses JSX. I've shown you the `createElement` way so you'll understand what JSX is actually doing. It doesn't do hardly anything. It just makes your code a bit more readable.
 
 If I write `React.createElement("h1", { id: "main-title" }, "My Website");`, what am I actually trying to have rendered out? `<h1 id="main-title">My Website</h1>`, right? What JSX tries to do is to shortcut this translation layer in your brain so you can just write what you mean.
 
@@ -56,9 +58,10 @@ npm i -D eslint-plugin-react@7.37.1
 Then in your eslint.config.mjs
 
 ```javascript
-// at top
+// at top, import the ESLint reactPlugin
+import reactPlugin from "eslint-plugin-react";
 
-// under js.configs.recommended
+// under js.configs.recommended line
 {
   ...reactPlugin.configs.flat.recommended,
   settings: {
@@ -72,12 +75,14 @@ reactPlugin.configs.flat["jsx-runtime"],
 // add to files
 files: ["**/*.js", "**/*.jsx"], // add JSX
 
-// inside the same object files, top level field
+// inside the same object files, after the languageOptions:
 rules: {
   "react/no-unescaped-entities": "off",
   "react/prop-types": "off",
 },
 ```
+
+You can also copy fill config from [the repo][eslint].
 
 We have to add two configs, one to allow ESLint to understand React and add some basic React rules, and one to modernize it as React 17 changed a bit how ESLint interacts with React.
 
@@ -114,7 +119,7 @@ const App = () => {
 
 const container = document.getElementById("root");
 const root = createRoot(container);
-root.render(React.createElement(App));
+root.render(<App />);
 ```
 
 Also head over to index.html and change the script tag
@@ -126,6 +131,8 @@ Also head over to index.html and change the script tag
 Notice we have Pizza as a component. Notice that the `P` in `Pizza` is capitalized. It _must_ be. If you make it lowercase, it will try to have `pizza` as a web component and not a React component.
 
 We now pass props down as we add attributes to an HTML tag. Pretty cool.
+
+You can test your app by running `npm run dev` and opening the URL shown in the terminal. It's typically [http://localhost:5173/]()
 
 ## The API / Image Server
 
@@ -153,7 +160,9 @@ export default defineConfig({
 });
 ```
 
-Now run your API server by running api/server.js by running `node api/server.js`. Note that this server is _outside_ your project directory. If you're in the project directory, you'll have to run `node ../api/server.js`. You need both servers running at the same time. Your Vite server will intercept `api` and `public` calls and reroute them to your API server!
+## Run the API Server
+
+Open a new terminal and navigate to the `api` directory. Note that this server is _outside_ your project directory. You'll need to install the dependencies with `npm install`. After that, you can start the server by running `node api/server.js`. You need both servers running at the same time. Your Vite server will intercept `api` and `public` calls and reroute them to your API server!
 
 Now let's add images to our Pizza.
 
@@ -183,3 +192,4 @@ And now you should have images!
 [standard]: https://standardjs.com/
 [step]: https://github.com/btholt/citr-v9-project/tree/master/03-jsx
 [api]: https://github.com/btholt/citr-v9-project/tree/main/api
+[eslint]: https://github.com/btholt/citr-v9-project/blob/main/03-jsx/eslint.config.mjs

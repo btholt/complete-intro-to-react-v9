@@ -13,6 +13,7 @@ keywords:
   - Vite
   - JSX
 ---
+
 > 🚨 You do not need to watch/read previous versions of this course. This is just the ninth revision of the course.
 
 Hello! And welcome to the Complete Intro to React, version 9. In this course you will go from not knowing anything about React to being job ready. This course teaches all the core concepts of React aiming to be the most useful. You will learn React from a first-principles methodology – we will start with no build tools or anything like that, just vanilla JavaScript and React. Over time we add tools like Vite, JSX, ESLint, Prettier, etc. so you can learn how to construct your own stack from scratch. I will teach a few ecosystem tools as well, testing, and what's coming soon for React.
@@ -48,11 +49,17 @@ I write these courses and take care to not make mistakes. However when teaching 
 
 ## How the repo works
 
-There are two repos for this class: [the website you're currently on][site] and [the example projects][projects].
+There are two repos for this class: [the website you're currently on][site] and [the example projects][projects]. To get set up, clone or [download][zip] the projects repo:
+
+```bash
+git clone https://github.com/btholt/citr-v9-project.git
+```
 
 Every step of this project will have a folder that will be a snapshot of where the project is at that step. If you get stuck, want to copy/paste some long bit of code you don't feel like writing, or just want to walk through the code at that point, please do! The primary goal of this is for you to learn so as long as you're learning there's no cheating!
 
-The naming format will be `XX-<name of the lesson>` so you can get a rough idea of order and which lesson the step is coming from. In each snapshot you'll have to run `npm install` again since it'll literally just be another whole copy of the project.
+The naming format will be `XX-<name of the lesson>` so you can get a rough idea of order and which lesson the step is coming from. In each snapshot you'll have to run `npm install` again since they are another whole copy of the project.
+
+We're going to be starting from scratch, but you'll need the repo downloaded because there's an `api` directory that will be used later in the course.
 
 > And one last request! [Please star this repo][site]. It helps the course be more discoverable and with my fragile ego.
 
@@ -63,3 +70,5 @@ The naming format will be `XX-<name of the lesson>` so you can get a rough idea 
 [site]: https://github.com/btholt/complete-intro-to-react-v9
 [projects]: https://github.com/btholt/citr-v9-project
 [issues]: https://github.com/btholt/complete-intro-to-react-v9/issues
+[neon]: https://neon.tech/
+[zip]: https://github.com/btholt/citr-v9-project/archive/refs/heads/main.zip

@@ -13,6 +13,9 @@ keywords:
   - web development
   - Brian Holt
 ---
+
+## Portals
+
 What if you are rendering a page and you want to render something in another part of the page at the same time? Think like you have a contextual right navigation and you have a page that wants to render into the contextual nav. We could use something like context to do that and that would be totally acceptable. But there's another cool way called a portal to do this as well. It even lets us render outside our app totally, like we're about to do.
 
 We're going to do a modal or a "popover". I think these are bad user experiences but it's a perfect use case for a portal so we're going to do it! In our case, because we want the modal to render in front of everything, we need the div that the modal renders into to be first in the DOM. So let's go make a div that does that. Open your index.html file and put this in there.
@@ -131,3 +134,7 @@ const { isLoading: isLoadingPastOrder, data: pastOrderData } = useQuery({
 - When a user clicks Close, we set the focusedOrder to be undefined again which causes the Modal to unrender.
 
 That's it!
+
+> 🏁 [Click here to see the state of the project up until now: 11-modals][step]
+
+[step]: https://github.com/btholt/citr-v9-project/tree/master/11-modals

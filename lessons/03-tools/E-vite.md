@@ -11,6 +11,9 @@ keywords:
   - JavaScript
   - frontend development
 ---
+
+## Vite
+
 The build tool we are going to be using today is called [Vite][vite]. Vite (pronounced "veet", meaning quick in French) is a tool put out by the Vue team that ultimately ends up wrapping [Rollup][rollup] which does the actual bundling. The end result is a tool that is both easy to use and produces a great end result.
 
 > Fun fact: there's a new project being developed called [Rolldown][rolldown] which is written in Rust and aims to replace Rollup.
@@ -49,7 +52,7 @@ export default defineConfig({
 });
 ```
 
-By default, Vite will find the index.html file in where-ever the root is and treat it as the head of a source graph. It'll crawl all your HTML, CSS, and JavaScript you link to from there and create your project for you. We don't have to do any more configuration than that. Vite will take care of the rest.
+By default, Vite will look for the index.html file in the root directory and treat it as the head of a source graph. It'll crawl all your HTML, CSS, and JavaScript you link to from there and create your project for you. We don't have to do any more configuration than that. Vite will take care of the rest.
 
 Okay, let's _actually_ install React to our project.
 
@@ -87,7 +90,7 @@ Instead of /public/style.css, use /style.css.` – ignore this, we'll fix it in 
 
 `dev` will start the development server, typically on [http://localhost:5173/](). `build` will prepare static files to be deployed (to somewhere like GitHub Pages, Vercel, Netlify, AWS S3, etc.) `preview` lets you preview your production build locally.
 
-> Do note that we've changed domains here. By default Vite uses localhost:5173. Fun fact, 5173 sort of spells VITE if you make the 5 its Roman Numeral version, V.
+> Note that we've changed domains here. By default Vite uses localhost:5173. Fun fact, 5173 sort of spells VITE if you make the 5 its Roman Numeral version, V.
 
 ## Alternatives
 
