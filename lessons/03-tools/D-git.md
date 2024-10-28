@@ -13,7 +13,9 @@ keywords:
   - frontend development
 ---
 
-Git is a critical part of any project and probably something many of you are already familiar with. If you haven't, be sure to initialize your project as a git repo with `git init` in the root of your project (VSCode and any other number of tools can do this as well.)
+## Git
+
+Git is a critical part of any project and probably something many of you are already familiar with. [Install Git][git] if you don't already have it installed. Then initialize your project as a git repo with `git init` in the root of your project (VSCode and any other number of tools can do this as well.)
 
 If you haven't already, create a .gitignore at the root of your project to ignore the stuff we don't want to commit. Go ahead and put this in there:
 
@@ -29,3 +31,4 @@ coverage/
 This will make it so these things won't get added to our repo. If you want more Git instruction, please check out [ThePrimeagen's course on Frontend Masters][prime].
 
 [prime]: https://frontendmasters.com/courses/everything-git/
+[git]: https://git-scm.com/book/en/v2/Getting-Started-Installing-Git

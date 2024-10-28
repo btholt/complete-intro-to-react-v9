@@ -14,6 +14,8 @@ keywords:
   - async rendering
 ---
 
+## use and Suspense
+
 We've been talking about React Suspense for a long time, and technically still we are not suppose to use it directly. But we React 19 we will get some blessed ways to start using it. (Some libraries already use it.)
 
 The idea behind Suspense is that a React component can start rendering and then suspend itself if all its data hasn't loaded yet. This is cool because your code reads really well: it basically looks like you're assuming the data is already there, and React takes care of getting it behind the scene.

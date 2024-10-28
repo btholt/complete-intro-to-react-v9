@@ -44,8 +44,5 @@ Lastly, add `coverage/` to your `.gitignore` since this shouldn't be checked in.
 
 v8 use Chrome's built-in code coverage capabilities to run your tests which makes it significantly faster and outputs it in a way that all of [Istanbul][istanbul] tools work with it. You can tell Vitest to use Istanbul but unless you have a very specific reason to, just use v8.
 
-> 🏁 [Click here to see the state of the project up until now: testing][step]
-
-[step]: https://github.com/btholt/citr-v8-project/tree/master/testing
 [istanbul]: https://istanbul.js.org/
 [c8]: https://github.com/bcoe/c8

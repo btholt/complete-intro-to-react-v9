@@ -13,6 +13,8 @@ keywords:
   - Brian Holt
 ---
 
+## Tanstack Router
+
 So now we have arrived to the point where we want multiple pages in our app. We need some sort of router tool to accomplish that. We _could_ just work with the browser's history API to do it but there so many ways to get it wrong, plus we are spoiled for choice when it comes to great React routing libraries.
 
 Historically I have taught [react-router][rr] as part of this course. It has been around for a long time and is well tested. Nearly every version of this course uses it (there was a brief while where it was Reach Router, but that has since been merged back into React Router.) It is a great tool and it underpins Remix, a great full-stack React framework. Remix and React Router are actually merging and will eventually be the same thing. [v8 of this course][v8] use React Router if you want to learn more about it from me.
@@ -21,7 +23,7 @@ Historically I have taught [react-router][rr] as part of this course. It has bee
 
 Today we are going to be using [TanStack Router][tsr], another amazing router. Why the switch? Two reasons:
 
-- This is a client-side focused course, and TanStack Router is made for client-side use cases. React Router and Remix have shifted a lot of focus to a more full-stack experience (though it does still work client-side only.)
+- This is a client-side focused course, and TanStack Router is made for client-side use cases. React Router and Remix have shifted a lot of focus to a more full-stack experience (though they do still work client-side only).
 - In Intermediate React we will be covering more full-stack use cases, in which I will using Next.js to show off those features.
 
 So, suffice to say, you have a lot of good choices. I'm a fan of TanStack Router and I think it's a great tool for you to get started with. Let's dive in.
@@ -29,8 +31,8 @@ So, suffice to say, you have a lot of good choices. I'm a fan of TanStack Router
 Let's start by installing it.
 
 ```bash
-npm install @tanstack/react-router
-npm install -D @tanstack/router-plugin @tanstack/router-devtools
+npm install @tanstack/react-router@1.65.0
+npm install -D @tanstack/router-plugin@1.65.0 @tanstack/router-devtools@1.65.0
 ```
 
 We need to install the router and then we'll be using its code generation tool as well as its dev tools (which are dev-only, hence the -D). Let's add it first to our vite.config.js.
@@ -165,17 +167,20 @@ import { Link } from "@tanstack/react-router";
 // surround the logo with a link
 <Link to={"/"}>
   <h1 className="logo">Padre Gino's Pizza</h1>
-</Link>;
+</Link>
 ```
 
 This should all work now. Open your app and see if it loads.
 
 - Notice you get a little flash before it loads. It's lazy-loading your route. If this was a real app, we'd make a more pleasant loading experience. I'll leave that as an exercise for you to do.
-- So, let's talk about the cart. Go to the order page, add a bunch of stuff to cart, and head back to the home page. Notice there's still stuff in our cart! Head back to the order page and see it's still there. That's because \_\_root.jsx (where our cart state lives) never gets unrendered. If this just lived in Cart.jsx or order.lazy.jsx, it'd be blown away whenever you navigate away. Why? Because when the component gets unrendered, it loses all of its state. This is one of the reasons Context can be super powerful.
+- So, let's talk about the cart. Go to the order page, add a bunch of stuff to cart, and head back to the home page. Notice there's still stuff in our cart! Head back to the order page and see it's still there. That's because \_\_root.jsx (where our cart state lives) never gets un-rendered. If this just lived in Cart.jsx or order.lazy.jsx, it'd be blown away whenever you navigate away. Why? Because when the component gets un-rendered, it loses all of its state. This is one of the reasons Context can be super powerful.
 - Take a gander at the dev tools being rendered in the bottom left (don't worry, it gets stripped out automatically in production.) Click into and peruse around. Lots of cool stuff here for free.
 
 You did it! That's how easy routing has become. It's come so far from the early days of React.
 
+> 🏁 [Click here to see the state of the project up until now: 09-router][step]
+
+[step]: https://github.com/btholt/citr-v9-project/tree/master/09-router
 [rr]: https://reactrouter.com/
 [v8]: https://react-v8.holt.courses/lessons/react-capabilities/react-router
 [tsr]: https://tanstack.com/router/latest

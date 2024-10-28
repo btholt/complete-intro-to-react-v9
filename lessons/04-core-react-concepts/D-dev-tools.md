@@ -25,12 +25,12 @@ Why is it important that we strip the debug stuff out? The dev bundle of React i
 
 ## Strict Mode
 
-React has a new strict mode. If you wrap your app in `<StrictMode></StrictMode>` it will give you additional warnings about things you shouldn't be doing. I'm not teaching you anything that would trip warnings from `StrictMode` but it's good to keep your team in line and not using legacy features or things that will be soon be deprecated.
+React has a new strict mode. If you wrap your app in `<StrictMode></StrictMode>` it will give you additional warnings about things you shouldn't be doing. I'm not teaching you anything that would strip warnings from `StrictMode` but it's good to keep your team in line and not using legacy features or things that will be soon be deprecated.
 
 Be aware that `StrictMode` continually double-renders your components and will run effects twice. It does this catch subtle bugs where your app will change between renders when it's not meant to. It can be helpful, but to be honest, once you learn to write React the correct way you'll nearly never hit that sort of bug.
 
 ## Dev Tools
 
-React has wonderful dev tools that the core team maintains. They're available for both Chromium-based browsers and Firefox. They let you do several things like explore your React app like a DOM tree, modify state and props on the fly to test things out, tease out performance problems, and programtically manipulate components. Definitely worth downloading now. [See here][dev-tools] for links.
+React has wonderful dev tools that the core team maintains. They're available for both Chromium-based browsers and Firefox. They let you do several things like explore your React app like a DOM tree, modify state and props on the fly to test things out, tease out performance problems, and programmatically manipulate components. Definitely worth downloading now. [See here][dev-tools] for links.
 
 [dev-tools]: https://react.dev/learn/react-developer-tools

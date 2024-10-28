@@ -12,6 +12,9 @@ keywords:
   - global state
   - Brian Holt
 ---
+
+## Context
+
 Let's make a cart indicator on the top right of the page. Create a file called Header.jsx and put this in there.
 
 ```javascript
@@ -34,7 +37,7 @@ Now let's use that in App.jsx
 import Header from "./Header";
 
 // replace .logo
-<Header />;
+<Header />
 ```
 
 Right now this will always show 5 but we want that number in .nav-cart-number to reflect how many items we have in our cart. How would we do that? We could move all of cart and its hooks to App.jsx and pass it into both Header and Order. In an app this small, that could be the right choice. But let's look at another way to do it, context.
@@ -55,7 +58,7 @@ Okay, let's go put it in App.jsx.
 
 ```javascript
 // at the top
-import React, { StrictMode, useState } from "react"; // need useState
+import { StrictMode, useState } from "react"; // need useState
 import { CartContext } from "./contexts";
 
 // replace App
@@ -105,4 +108,8 @@ const [cart] = useContext(CartContext);
 
 That's it! We don't need the setCart function so we don't import that. Otherwise all looks pretty normal!
 
-So that's context. It's superful for stuff like this where we don't want to "prop drill" our state everywhere. Since cart is now being held at the App level, we definitely could have just said `<Header cart={cart} />` and called it a day, and in this specific use case I would have. But now imagine if Header was super deeply nested and you had to pass that state down a lot of children components – it gets messy quickly. This is what we call prop drilling. React's explicit data flow is a feature, not a bug. It makes where data came from and where data is going very readable. But it can make your code verbose in a non-helpful way, and context is an escape hatch for that. In general, use context sparingly and only where it's _really_ inconvenient to just do it the normal way of using props.
+So that's context. It's super useful for stuff like this where we don't want to "prop drill" our state everywhere. Since cart is now being held at the App level, we definitely could have just said `<Header cart={cart} />` and called it a day, and in this specific use case I would have. But now imagine if Header was super deeply nested and you had to pass that state down a lot of children components – it gets messy quickly. This is what we call prop drilling. React's explicit data flow is a feature, not a bug. It makes where data came from and where data is going very readable. But it can make your code verbose in a non-helpful way, and context is an escape hatch for that. In general, use context sparingly and only where it's _really_ inconvenient to just do it the normal way of using props.
+
+> 🏁 [Click here to see the state of the project up until now: 08-context][step]
+
+[step]: https://github.com/btholt/citr-v9-project/tree/master/08-context

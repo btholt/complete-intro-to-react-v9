@@ -14,6 +14,8 @@ keywords:
   - Brian Holt
 ---
 
+## Hooks
+
 Okay, so now we want to make it so people can add pizzas to their order. We need a little form that allows them to select the pizza and the size. Create a new file called Order.jsx and add the following:
 
 ```javascript
@@ -93,7 +95,7 @@ Now add it to your App.jsx:
 import Order from "./Order";
 
 // in App.jsx, replace all the Pizzas
-<Order />;
+<Order />
 ```
 
 > 🚨 You'll have some errors in the console, that's okay.
@@ -134,7 +136,7 @@ onChange={(e) => setPizzaSize(e.target.value)}
 - `useState` returns to us an array with two things in it: the current value of that state and a function to update that state. We're using a feature of JavaScript called destructuring to get both of those things out of the array.
 - We use the `setPizzaType` / `setPizzaSize` function in the `onChange` attribute of the input. Every time the input is typed into, it's going to call that functions which call `setPizzaType` and `setPizzaSize` with what has been typed into the input or what has been selected or what has been clicked on. When `setPizzaType` and `setPizzaSize` are called, React knows that its state has been modified and kicks off a re-render.
 - You can make your own custom hooks; `useState` is just one of many.
-- Historically, React has been written using `class`es with state being on the instance of the component. This is still a supported pattern in React. We'll see how to do it later.
+- Historically, React has been written using classes with state being on the instance of the component. This is still a supported pattern in React. We'll see how to do it later.
 - We could have put an onChange handler on each of the radio buttons. However event bubbling works the same in React as it does in the normal DOM and we could put it directly on the div that encapsulates all the radio buttons and just have to do it once.
 - You can use `useState` as many times as you need for various pieces of state! Again, this is why ordering is important because React relies on `useState` to be called in strictly the same order every time so it can give you the same piece of state.
 - Similar to above. We're using `onChange` and `onBlur` because it makes it more accessible.
@@ -142,7 +144,7 @@ onChange={(e) => setPizzaSize(e.target.value)}
 > I'm showing you how to do a "controlled form" in that we're using hooks to control each part of the form. In reality, it'd be better to leave these _uncontrolled_ (aka don't set the value) and wrap the whole thing in a form. Then we can listen for submit events and use that event to gather info off the form. This is less code and less burdensome to write. If you have a standard form sort of thing to write, do that as an uncontrolled form. If you need to do dynamic validation, react to a user typing a la typeahead (functionality that provides real-time suggestions), or something of the ilk, then a controlled input is perfect, otherwise stick to uncontrolled.
 > Also what's new in React is called a "form action" that is considered unstable. In the future you will just add `<form action="blah">[…]</form>` and a form action will handle the entire form for you.
 
-Another side note: event bubbling works in React works just like you would expect. In theory you can have mega event handler in React but the lint rules and React's dev tools get noisy about it if you do it that way so I tend to just follow their recommendation.
+Another side note: event bubbling in React works just like you would expect. In theory you can have mega event handler in React but the lint rules and React's dev tools get noisy about it if you do it that way so I tend to just follow their recommendation.
 
 ```javascript
 // you could replace the div surrounding the radio buttons and remove all the onChange handlers
@@ -152,5 +154,5 @@ Another side note: event bubbling works in React works just like you would expec
 > 🏁 [Click here to see the state of the project up until now: 04-hooks][step]
 
 [babel]: https://babeljs.io/
-[step]: https://github.com/btholt/citr-v8-project/tree/master/04-hooks
+[step]: https://github.com/btholt/citr-v9-project/tree/main/04-hooks
 [js-api]: https://developer.mozilla.org/en-US/docs/Web/API/Element/className

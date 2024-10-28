@@ -13,9 +13,10 @@ keywords:
   - Visual Studio Code
   - Starship Prompt
 ---
+
 ## Node.js
 
-You'll need to have a Node.js version installed, and preferably something after v20.6. I wrote this course with 20.16 but it should be fairly future-proof.
+You'll need to have a Node.js version installed, and preferably something after v20.16. I wrote this course with 20.16 but it should be fairly future-proof.
 
 I use [fnm][fnm] to manage my Node.js versions (similar to nvm).
 

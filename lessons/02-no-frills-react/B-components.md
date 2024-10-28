@@ -13,9 +13,10 @@ keywords:
   - reusable components
   - dynamic apps
 ---
-Now that we've done that, let's separate this out from a script tag on the DOM to its own script file (best practice.) Make a new file in your `src` directory called `App.js` and cut and paste your code into it.
 
-Modify your code so it looks like:
+Now that we've done that, let's separate this out from a script tag on the DOM to its own script file (best practice.)
+
+Modify your code in `App.js` so it looks like:
 
 ```javascript
 const Pizza = () => {
@@ -42,7 +43,7 @@ root.render(React.createElement(App));
 > 🚨 You will be seeing a console warning `Warning: Each child in a list should have a unique "key" prop.` in your browser console. React's dev warnings are trying to help your code run faster. Basically, React tries to keep track of components that are swapped in order. In a list, it does that by you giving it a unique key it can track. If it sees two things have swapped, it'll just move the components instead of re-rendering.
 
 - To make an element have multiple children, just pass it an array of elements.
-- We created a second new component, the `Pizza` component. This component represents one pet. When you have distinct ideas represented as markup, that's a good idea to separate that it into a component like we did here.
+- We created a second new component, the `Pizza` component. This component represents one pizza. When you have distinct ideas represented as markup, that's a good idea to separate that it into a component like we did here.
 - Since we have a new `Pizza` component, we can use it multiple times! We just use multiple calls to `React.createElement`.
 - In `createElement`, the last two parameters are optional. Since Pizza has no props or children (it could, we just didn't make it use them yet) we can just leave them off.
 

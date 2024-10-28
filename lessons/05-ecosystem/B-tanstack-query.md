@@ -16,6 +16,8 @@ keywords:
   - Brian Holt
 ---
 
+## Tanstack Query
+
 Let's make make a past orders page. Create a new file, `past.lazy.jsx`. If your Vite server is already running, it will automatically stub it out for you! Pretty cool developer experience from TanStack.
 
 Now let's install our next tool, [TanStack (React) Query][tsq].
@@ -46,7 +48,7 @@ Let's also add the dev tools, like we did for the router. In `src/routes/__root.
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 
 // under router dev tools
-<ReactQueryDevtools />;
+<ReactQueryDevtools />
 ```
 
 Now in the bottom right of your window you'll see a 🏝️. Click on that and we'll open the dev tools. We haven't used the dev tools yet so it'll be empty.
@@ -132,4 +134,7 @@ function PastOrdersRoute() {
 
 That's it! React Query is both simple to use and super flexible to handle a tough problem. It's one of my favorite libraries for React.
 
+> 🏁 [Click here to see the state of the project up until now: 10-query][step]
+
+[step]: https://github.com/btholt/citr-v9-project/tree/master/10-query
 [tsq]: https://tanstack.com/query/latest

@@ -46,7 +46,7 @@ test("alt text renders on image", async () => {
 
 This is your most basic test. It renders a React component, and then starts running assertions on it. Here we're asserting that our pizza image ends up with the correct alt text on it. Not the most useful test but a good start for us seeing how to assert something. I could see this being useful if we had bugs that occasionally alt text wasn't showing up.
 
-We're using getByRole here to grab the image on the page. In general React Testing Library wants you to adopt a user-centric mindset of how you're asserting things on the page. In thise case we're trying to find an image which is something a user would see. Contrast that with using a CSS selector to select the image (which you can do, it's just frowned upon) which is very implementation-centric (a user doesn't know nor care about CSS classes.)
+We're using getByRole here to grab the image on the page. In general React Testing Library wants you to adopt a user-centric mindset of how you're asserting things on the page. In this case we're trying to find an image which is something a user would see. Contrast that with using a CSS selector to select the image (which you can do, it's just frowned upon) which is very implementation-centric (a user doesn't know nor care about CSS classes.)
 
 Let's add another test to make sure that we have a default image if pizza isn't passed an image.
 

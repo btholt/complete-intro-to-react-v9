@@ -12,11 +12,14 @@ keywords:
   - pizza of the day
   - debug value
 ---
+
+## Custom Hooks
+
 One thing that's pretty special about hooks is their composability. You can use hooks to make other hooks! People tend to call these custom hooks. There are even people who go as far to say "never make an API request in a component, always do it in a hook." I don't know if I'm as hardcore as that but I see the logic in it. If you make a custom hook for those sorts of things they become individually testable and do a good job to separate your display of data and your logic to acquire data. I'm more in the camp of make custom hooks for either complicated logic or reusable logic, but for simple cases it's okay to keep things simple.
 
 Okay, so we want to add a "Pizza of the Day" banner at the bottom of our page. This necessitates calling a special API to get the pizza of the day (which should change every day based on your computer's time.) Let's first write the component that's going to use it.
 
-Make a file called PizzaOftheDay.jsx
+Make a file called PizzaOfTheDay.jsx
 
 ```javascript
 import { usePizzaOfTheDay } from "./usePizzaOfTheDay";
@@ -92,7 +95,7 @@ Lastly, let's go add this to App.jsx so our component renders.
 import PizzaOfTheDay from "./PizzaOfTheDay";
 
 // under <Order />
-<PizzaOfTheDay />;
+<PizzaOfTheDay />
 ```
 
 You should now see the new component which uses our new hook at the bottom!

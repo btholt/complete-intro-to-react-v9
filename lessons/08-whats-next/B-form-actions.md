@@ -12,6 +12,9 @@ keywords:
   - Brian Holt
   - React upgrade
 ---
+
+## Form Actions
+
 Okay, so let's actually upgrade our app to be React 19.
 
 > 🚨 Pay attention here, as you need to figure out which version of React to install.
@@ -50,7 +53,7 @@ function addToCart() {
 <form action={addToCart}>[…]</form>;
 ```
 
-Same as above. But here's what cool if you're using somethingl like Next.js or Remix: we can use the `'use server'` directive here and make this a _server_ action. Something like
+Same as above. But here's what cool if you're using something like Next.js or Remix: we can use the `'use server'` directive here and make this a _server_ action. Something like
 
 ```javascript
 function addToCart(formData) {

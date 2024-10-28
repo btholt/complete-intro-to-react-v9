@@ -14,6 +14,7 @@ keywords:
   - Cart.jsx
   - web development
 ---
+
 So now we want to be able to handle the user's cart and submitting our order. Let's go add what we need to Order.jsx
 
 ```javascript
@@ -35,7 +36,7 @@ const [cart, setCart] = useState([]);
 
 // just inside the last closing div
 {
-  loading ? <h2>LOADING …</h2> : <Cart cart={cart} />;
+  loading ? <h2>LOADING …</h2> : <Cart cart={cart} />
 }
 ```
 
@@ -102,3 +103,7 @@ async function checkout() {
 ```
 
 Now we can pass that checkout function in and whenever someone clicks inside the form, it will run the checkout function from the Order components. We're doing a simple loading animation, doing a fetch, and then clearing the status once we're all done. Not too bad!
+
+> 🏁 [Click here to see the state of the project up until now: 07-handling-forms][step]
+
+[step]: https://github.com/btholt/citr-v9-project/tree/master/07-handling-forms
