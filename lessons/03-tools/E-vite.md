@@ -36,7 +36,7 @@ The former is the tool itself and the latter is all the React specific features 
 
 ```html
 <!-- delete the two unpkg script lines -->
-<script type="module" src=".src/App.js"></script>
+<script type="module" src="./src/App.js"></script>
 ```
 
 We need to add module to the script tag so that the browser knows it's working with modern browser technology that allows you in development mode to use modules directly. Instead of having to reload the whole bundle every time, your browser can just reload the JS that has changed. It allows the browser to crawl the dependency graph itself which means Vite can run lightning fast in dev mode. It will still package it up for production so we can support a range of browsers.
