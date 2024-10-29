@@ -17,7 +17,7 @@ keywords:
 
 Let's start by writing pure React. No compile step. No JSX. No Babel. No Webpack or Vite. Just some JavaScript on a page.
 
-Let's start your project. Create your project directory inside the repo. I'm going to call mine `pizza` since we're going to be building a pizza ordering system throughout this course. Open that directory in VS Code or your editor of choice. Create an index.html and add this markup:
+Let's start your project. Create your project directory inside the repo. I'm going to call mine `padre-ginos` since we're going to be building a pizza ordering system throughout this course. Open that directory in VS Code or your editor of choice. Create an index.html and add this markup:
 
 ```html
 <!DOCTYPE html>
