@@ -46,3 +46,4 @@ v8 use Chrome's built-in code coverage capabilities to run your tests which make
 
 [istanbul]: https://istanbul.js.org/
 [c8]: https://github.com/bcoe/c8
+[v8]: https://vitest.dev/guide/coverage.html

@@ -28,7 +28,8 @@ coverage/
 .vscode/
 ```
 
-This will make it so these things won't get added to our repo. If you want more Git instruction, please check out [ThePrimeagen's course on Frontend Masters][prime].
+This will make it so these things won't get added to our repo. If you want more Git instruction, please check out the courses from [ThePrimeagen][prime] and [Nina Zakharenko][nina] on Frontend Masters.
 
 [prime]: https://frontendmasters.com/courses/everything-git/
 [git]: https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
+[nina]: https://frontendmasters.com/courses/git-in-depth/

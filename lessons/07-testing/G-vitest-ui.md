@@ -30,3 +30,5 @@ And in your package.json
 ```
 
 Now from the command line run `npm run test:ui` and it should pop up your browser with the Vitest UI open. Super convenient, particularly in places you need to run individual tests repeatedly and you don't have the VS Code extension. The module graph is a cool visualization as well.
+
+[ui]: https://vitest.dev/guide/ui.html
