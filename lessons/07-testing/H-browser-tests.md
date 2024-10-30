@@ -16,6 +16,7 @@ keywords:
   - Brian Holt
   - web development
 ---
+
 > 🚨 This is experimental and very likely to change in the future. Consider this a sneak peak into what is coming, not what to do today.
 
 Vitest is beginning to support more deeply browser-based testing. To those of us that have been around long enough to remember Selenium, this may strike fear deep int your heart. But fear not! Browser-based testing tools have come so far along since then that it's both fast and reliable, in particular thanks to the Microsoft project [Playwright][playwright].
@@ -30,7 +31,7 @@ npm i -D @vitest/browser@2.1.3 playwright@1.48.0 vitest-browser-react@0.0.1
 
 You can see that the vitest-browser-react library is still 0.0.1 as of writing so be extra aware it's likely to have changed by the time you read this.
 
-Okay, so now we want to write browser based tests. But we have also have a bunch of existing Node.js-based tests. Some our already-existing Node.js based tests won't work in the browser. But no worries, Vitest/Vite has a tool just for this, workspaces. It's actually made to handle monorepos, but it will work here just as well. Make a file called `vitest.config.js` (you don't normally need this as your Vite config is normally enough.)
+Okay, so now we want to write browser based tests. But we have also have a bunch of existing Node.js-based tests. Some our already-existing Node.js based tests won't work in the browser. But no worries, Vitest/Vite has a tool just for this, workspaces. It's actually made to handle monorepos, but it will work here just as well. Make a file called `vitest.workspace.js` (you don't normally need this as your Vite config is normally enough.)
 
 ```javascript
 import { defineWorkspace } from "vitest/config";
@@ -60,7 +61,7 @@ export default defineWorkspace([
 ]);
 ```
 
-Now delete the `test` items from your vite.config.js file
+Now delete the `test` items from your vite.config.js file. //TODO: this is where we also had to remove coverage and put it in the vitest.workspace.js, which ended up necessitating a full switch to Istanbul
 
 This is a test-only config for Vite (and therefore Vitest.) Now if a test ends in `.node.test.jsx` it will run through the happy-dom based environment and if it ends in `.browser.test.jsx` it will run in our new browser-based environment with Playwright. Let's go rename our tests to reflect that.
 
@@ -76,7 +77,7 @@ Okay, now create a Pizza.browser.test.jsx
 ```javascript
 import { render } from "vitest-browser-react";
 import { expect, test } from "vitest";
-import Pizza from "../src/Pizza";
+import Pizza from "../Pizza";
 
 test("alt text renders on image", async () => {
   const name = "My Favorite Pizza";

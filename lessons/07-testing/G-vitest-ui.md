@@ -19,7 +19,7 @@ keywords:
 Another fun little tool let's you use is [Vitest UI][ui]. It allows you to see and manage all your tests from the web browser. Let's add it.
 
 ```bash
-npm i -D @vitest/ui
+npm i -D @vitest/ui@2.1.3
 ```
 
 And in your package.json

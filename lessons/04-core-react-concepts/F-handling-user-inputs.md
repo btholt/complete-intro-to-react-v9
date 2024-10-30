@@ -15,6 +15,7 @@ keywords:
   - web development
 ---
 
+//TODO: no title? 'handling user inputs'
 So now we want to be able to handle the user's cart and submitting our order. Let's go add what we need to Order.jsx
 
 ```javascript
@@ -36,7 +37,7 @@ const [cart, setCart] = useState([]);
 
 // just inside the last closing div
 {
-  loading ? <h2>LOADING …</h2> : <Cart cart={cart} />
+  loading ? <h2>LOADING …</h2> : <Cart cart={cart} />;
 }
 ```
 

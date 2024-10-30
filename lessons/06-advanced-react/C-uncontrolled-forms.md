@@ -87,10 +87,10 @@ function ContactRoute() {
 }
 ```
 
-- We are using a mutation from TanStack React Query. Much it works very similar to normal gets except this one sends information to the API instead of gets it.
+- We are using a mutation from TanStack React Query. It works very similar to normal gets except this one sends information to the API instead of gets it.
 - Notice we're using `isSuccess` to show or hide the form. Once the mutation has successfully been submitted, we just want to show them that and then hide the form.
 - Notice we're not using state or useState at all here. We're using an "uncontrolled" form which just means we're letting the DOM manage the state. Only on a submit event are we reading from the DOM using the FormData API. We use that to submit to our API the contact data.
-- There's also isError and isIdle, we just didn't use them from TanStack Query
+- There's also isError and isIdle, we just didn't use them from TanStack Query.
 - Also notice in the dev tools for TanStack Query the mutations (it's in another tab.)
 
 Try it! You'll notice in the logs of where-ever your API is running that it logs out the contact info.

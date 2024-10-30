@@ -19,7 +19,7 @@ keywords:
 
 ## Error Boundaries
 
-Frequently there's errors with APIs with malformed or otherwise weird data. Let's be defensive about this because we still want to use this API but we can't control when we get errors. We're going to use a feature called `componentDidCatch` to handle this. This is something you can't do with hooks so if you needed this sort of functionality you'd have to use a class component.
+Frequently there are errors with APIs with malformed or otherwise weird data. Let's be defensive about this because we still want to use this API but we can't control when we get errors. We're going to use a feature called `componentDidCatch` to handle this. This is something you can't do with hooks so if you needed this sort of functionality you'd have to use a class component.
 
 This will also catch 404s on our API if someone give it an invalid ID!
 
