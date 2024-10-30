@@ -57,7 +57,7 @@ react({
 }),
 ```
 
-Now let's run your app! If everything is done right, you will notice _nothing_. It will look no different. But open your React dev tools and look through your components. You should see lots of components have "Memo ✨" next to them. These are the components the React Compiler able to automatically optimize for you.
+Now let's run your app! If everything is done right, you will notice _nothing_. It will look no different. But open your React dev tools and look through your components. You should see lots of components have "Memo ✨" next to them. These are the components the React Compiler was able to automatically optimize for you.
 
 And that's it! Over time this will get lots better. The React team is saying this is safe to try on your codebase today, so you might try it and see if it works for you. I know they'd love feedback on their GitHub repo.
 
