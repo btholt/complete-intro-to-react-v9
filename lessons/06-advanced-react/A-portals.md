@@ -57,7 +57,7 @@ export default Modal;
 Before we use our Modal, we'll need to make another API call function get a past order. In our example here, we're going to make it so you can click on one of the rows in our past orders page to see what was in the order. In `src/api`, add a file called `getPastOrder.js` (no `s`) and add this.
 
 ```javascript
-export default async function getPastOrders(order) {
+export default async function getPastOrder(order) {
   const response = await fetch(`/api/past-order/${order}`);
   const data = await response.json();
   return data;
@@ -65,6 +65,8 @@ export default async function getPastOrders(order) {
 ```
 
 Cool, let's go use this to render our Modal now. Open past.lazy.jsx.
+
+BRIAN TODO: add in section mentioning to add the onClick to the past-orders table on past.lazy.jsx
 
 ```javascript
 // import at top

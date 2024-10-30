@@ -94,7 +94,6 @@ function ErrorBoundaryWrappedPastOrderRoutes() {
     </ErrorBoundary>
   );
 }
-}
 ```
 
 - Now this is totally self contained. No one rendering PastOrderRoute has to know that it has its own error boundary. I'll let you decide if you like this pattern or if you would have preferred doing this in App.js at the Router level. Differing opinions exist.
