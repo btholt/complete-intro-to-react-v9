@@ -16,7 +16,7 @@ keywords:
   - Brian Holt
 ---
 
-This is meant to be a very brief treatise on how to do testing on React applications. This will be a brief intro on how to set up Vitest tests for the application we just created.
+This is meant to be a very brief treatise on how to do testing on React applications. This will be a brief intro on how to set up Vitest tests for the application we just created. For more information about Vite, Vitest, and testing in general, check out the [Build Tools & Testing Learning Path][lp].
 
 ## Testing with Vitest
 
@@ -67,3 +67,4 @@ Now that we've got that going, let's go write a test.
 [hd]: https://github.com/capricorn86/happy-dom
 [vitest]: https://vitest.dev/
 [v4]: https://frontendmasters.com/courses/intermediate-react-v4/setup-jest-testing-library/
+[lp]: https://frontendmasters.com/learn/build-tools/

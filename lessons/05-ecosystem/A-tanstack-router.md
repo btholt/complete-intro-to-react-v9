@@ -178,9 +178,9 @@ This should all work now. Open your app and see if it loads.
 
 You did it! That's how easy routing has become. It's come so far from the early days of React.
 
-> 🏁 [Click here to see the state of the project up until now: 09-router][step]
+> 🏁 [Click here to see the state of the project up until now: 09-routing][step]
 
-[step]: https://github.com/btholt/citr-v9-project/tree/master/09-router
+[step]: https://github.com/btholt/citr-v9-project/tree/master/09-routing
 [rr]: https://reactrouter.com/
 [v8]: https://react-v8.holt.courses/lessons/react-capabilities/react-router
 [tsr]: https://tanstack.com/router/latest
