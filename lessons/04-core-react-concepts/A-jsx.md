@@ -136,8 +136,9 @@ You can test your app by running `npm run dev` and opening the URL shown in the 
 
 ## The API / Image Server
 
-For this course we will use a little Fastify server I built for you. It's in the [api][api]
-directory. We are going to use Vite.js to proxy to this API server. This is a useful trick to do for local development if you have a separate frontend in a backend. Normally you'd have something like NGINX routing traffic to separate frontend and backend servers. For now we'll just use Vite.
+For this course we will use a little Fastify server I built for you. It's in the [api][api] directory. We are going to use Vite.js to proxy to this API server. This is a useful trick to do for local development if you have a separate frontend in a backend. Normally you'd have something like NGINX routing traffic to separate frontend and backend servers. For now we'll just use Vite.
+
+> Note: This means you'll need to have TWO terminal windows running. One terminal for the API server (which you won't have to touch once it's running). The other terminal is is our Vite server for our web app. 
 
 Add this to you vite.config.js
 
@@ -162,7 +163,7 @@ export default defineConfig({
 
 ## Run the API Server
 
-Open a new terminal and navigate to the `api` directory. Note that this server is _outside_ your project directory. You'll need to install the dependencies with `npm install`. After that, you can start the server by running `node api/server.js`. You need both servers running at the same time. Your Vite server will intercept `api` and `public` calls and reroute them to your API server!
+Open a new terminal and navigate to the `api` directory. Note that this server is _outside_ your project directory. You'll need to install the dependencies with `npm install`. After that, you can start the server by running `npm run dev`. You need both servers running at the same time. Your Vite server will intercept `api` and `public` calls and reroute them to your API server!
 
 Now let's add images to our Pizza.
 
