@@ -64,9 +64,19 @@ export default async function getPastOrder(order) {
 }
 ```
 
-Cool, let's go use this to render our Modal now. Open past.lazy.jsx.
+Cool, let's go use this to render our Modal now. Open `past.lazy.jsx`. Make the `order.order_id` value a button and add an `onClick` event so clicking it will open the Modal:
 
-BRIAN TODO: add in section mentioning to add the onClick to the past-orders table on past.lazy.jsx
+```javascript
+<td>
+  <button onClick={() => setFocusedOrder(order.order_id)}>
+    {order.order_id}
+  </button>
+</td>
+<td>{order.date}</td>
+<td>{order.time}</td>
+```
+
+Then render the modal if we have a `focusedOrder`: 
 
 ```javascript
 // import at top

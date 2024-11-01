@@ -61,7 +61,7 @@ export default defineWorkspace([
 ]);
 ```
 
-Now delete the `test` items from your vite.config.js file. //TODO: this is where we also had to remove coverage and put it in the vitest.workspace.js, which ended up necessitating a full switch to Istanbul
+Now delete the `test` items from your vite.config.js file.
 
 This is a test-only config for Vite (and therefore Vitest.) Now if a test ends in `.node.test.jsx` it will run through the happy-dom based environment and if it ends in `.browser.test.jsx` it will run in our new browser-based environment with Playwright. Let's go rename our tests to reflect that.
 

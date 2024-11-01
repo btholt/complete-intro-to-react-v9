@@ -49,7 +49,7 @@ Let's run this. We could open it directly in our browser but I like using [serve
   - The second library is the rendering layer. Since we're rendering to the browser, we're using React DOM. There are other React libraries like React Native, React Unity, React Babylon.js, React Email, React Figma, React Blessed, and others. You need both script tags. The order is not important.
 - The last script tag is where we're going to put our code. You don't typically do this but I wanted to start as simple as possible. This script tag must come _after_ the other two.
 
-> Let's add some style! [Click here][style] to get the stylesheet for this course. Make a file called style.css in src/ and paste the previous file there. If you follow along with the course and use the same class names, the styles will be applied for you automatically. This isn't a course on CSS so I make no assertion it's any good! TODO: in class we used href="/public/style.css" instead
+> If you want to add some CSS right now, [click here][style] to get the stylesheet for this course. Make a file called styles.css and paste the previous file there. Then add a link tag to your html file `<link rel="stylesheet" href="./style.css" />`.  We'll be linking to a CSS file located at `/api/pubic/styles.css` a little later in the course, but before we do that, we need to do some configuration (during the Vite lesson).
 
 Make a new directory called `src` and a new file called `App.js` in that directory and put this in there.
 

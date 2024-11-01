@@ -37,14 +37,14 @@ Now let's use that in App.jsx
 import Header from "./Header";
 
 // replace .logo
-<Header />;
+<Header />
 ```
 
 Right now this will always show 5 but we want that number in .nav-cart-number to reflect how many items we have in our cart. How would we do that? We could move all of cart and its hooks to App.jsx and pass it into both Header and Order. In an app this small, that could be the right choice. But let's look at another way to do it, context.
 
 Context is for app-level state. This is state that exists for your entire app. The currently logged in user would be a good example of this. You wouldn't want the user to exist in just the page level because once you navigate to another page, all state of the previous page is destroyed. You'd want that user info to persist between pages, and thus context is a good thing for that. Context allows you to keep a global state for your app. We're going to use it for the shopping cart which actually makes good sense: if a user navigates to another page, you'd want to keep their shopping cart between loads. This is a good way to think about when you may want to use context: if you want that stage to persist between pages.
 
-So let's make it work. Make a file called contexts.jsx. It's not a component so I tend to not capitalize it. The React docs do capitalize it. Up to you.
+So let's make it work. Make a file called `contexts.jsx`. It's not a component so I tend to not capitalize it. The React docs do capitalize it. Up to you.
 
 ```javascript
 import { createContext } from "react";

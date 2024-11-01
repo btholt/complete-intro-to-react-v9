@@ -71,7 +71,7 @@ function ErrorBoundaryWrappedPastOrderRoutes() {
 
 // first line in PastOrderRoute
 const data = use(loadedPromise);
-//TODO:  also, we had to remove the useQuery call to getPastOrders (with an S), and the related if (isLoading) return statement
+// also, we had to remove the useQuery call to getPastOrders (with an S), and the related if (isLoading) return statement
 ```
 
 - We use Suspense to tell React where to pause rendering until _everything_ in it has resolved. If you have several things that suspend, this won't render until they all complete.
