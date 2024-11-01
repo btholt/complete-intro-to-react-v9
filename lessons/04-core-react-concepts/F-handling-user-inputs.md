@@ -15,6 +15,8 @@ keywords:
   - web development
 ---
 
+## Handling User Input
+
 So now we want to be able to handle the user's cart and submitting our order. Let's go add what we need to Order.jsx
 
 ```javascript

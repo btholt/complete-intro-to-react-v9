@@ -22,7 +22,7 @@ Let's write our first test for Pizza.jsx. In general, here's my methodology for 
 - In general when I encounter a bug that is important for me to go back and fix, I'll write a test that would have caught that bug. Actually what I'll do is _before_ I fix it, I'll write the test that fails. That way I fix it I'll know I won't regress back there.
 - Ask yourself what's important about your app and spend your time testing that. Ask yourself "if a user couldn't do X then the app is worthless" sort of questions and test those more thoroughly. If a user can't change themes then it's probably not the end of the world (a11y is important) so you can spend less time testing that but if a user can't log in then the app is worthless. Test that.
 - Delete tests on a regular basis. Tests have a shelf life.
-- Fix or delete flaky tests. Bad tests are worse than no tests
+- Fix or delete flaky tests. Bad tests are worse than no tests.
 
 Okay, create a new file called `Pizza.test.jsx`. This naming convention is just habit. `Pizza.spec.jsx` is common too. But as long as it's in the `__tests__` directory it doesn't much matter what you call it.
 

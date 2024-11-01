@@ -123,7 +123,7 @@ const [pizzaSize, setPizzaSize] = useState("medium");
   value={pizzaType}
 >
   […]
-</select>;
+</select>
 
 // add to all the radio buttons
 onChange={(e) => setPizzaSize(e.target.value)}
@@ -139,7 +139,7 @@ onChange={(e) => setPizzaSize(e.target.value)}
 - Historically, React has been written using classes with state being on the instance of the component. This is still a supported pattern in React. We'll see how to do it later.
 - We could have put an onChange handler on each of the radio buttons. However event bubbling works the same in React as it does in the normal DOM and we could put it directly on the div that encapsulates all the radio buttons and just have to do it once.
 - You can use `useState` as many times as you need for various pieces of state! Again, this is why ordering is important because React relies on `useState` to be called in strictly the same order every time so it can give you the same piece of state.
-- Similar to above. We're using `onChange` and `onBlur` because it makes it more accessible.
+- Similar to above. We're using `onChange` because it makes it more accessible.
 
 > I'm showing you how to do a "controlled form" in that we're using hooks to control each part of the form. In reality, it'd be better to leave these _uncontrolled_ (aka don't set the value) and wrap the whole thing in a form. Then we can listen for submit events and use that event to gather info off the form. This is less code and less burdensome to write. If you have a standard form sort of thing to write, do that as an uncontrolled form. If you need to do dynamic validation, react to a user typing a la typeahead (functionality that provides real-time suggestions), or something of the ilk, then a controlled input is perfect, otherwise stick to uncontrolled.
 > Also what's new in React is called a "form action" that is considered unstable. In the future you will just add `<form action="blah">[…]</form>` and a form action will handle the entire form for you.
