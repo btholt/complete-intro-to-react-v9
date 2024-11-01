@@ -15,13 +15,13 @@ keywords:
 
 ## ESLint
 
-On top of Prettier which takes of all the formatting, you may want to enforce some code styles which pertain more to usage: for example you may want to force people to never use `with` which is valid JS but ill advised to use. [ESLint][eslint] comes into play here. It will lint for this problems.
+On top of Prettier which takes of all the formatting, you may want to enforce some code styles which pertain more to usage: for example you may want to force people to never use `with` which is valid JS but ill advised to use. [ESLint][eslint] comes into play here. It will lint for these problems.
 
 First of all, run `npm install -D eslint@9.9.1 eslint-config-prettier@9.1.0 globals@15.9.0` to install ESLint in your project development dependencies. Then you may configure it.
 
 There are dozens of preset configs for ESLint and you're welcome to use any one of them. The [Airbnb config][airbnb] is very popular, as is the standard config (both of which I taught in previous versions of this class). I'm going to use a looser one for this class: the recommended JS config from ESLint. Let's create an `eslint.config.mjs` file to start linting our project.
 
-> We're using .mjs (module JS) because we want to use import/export for modules instead of require
+> We're using .mjs (module JS) because we want to use import/export for modules instead of require.
 
 Add this to the `eslint.config.mjs` file:
 
@@ -65,7 +65,7 @@ Worth adding three things here:
 
 - With npm scripts, you can pass additional parameters to the command if you want. Just add a `--` and then put whatever else you want to tack on after that. For example, if I wanted to get the debug output from ESLint, I could run `npm run lint -- --debug` which would translate to `eslint --debug`.
 - We can use our fix trick this way: `npm run lint -- --fix`.
-- We're going to both JS and JSX.
+- We're going to use both JS and JSX.
 
 ESLint is a cinch to get working with [Visual Studio Code][vscode]. Just download [the extension][vscode-eslint].
 

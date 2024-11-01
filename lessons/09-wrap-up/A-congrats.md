@@ -12,9 +12,10 @@ keywords:
   - Intermediate React
   - React development
 ---
-## Congratulations!! You did it!
 
-This is a lot material to take in, so congrats on sticking with it. Hopefully it was fun and maybe made you support your local pizzeria along the way!
+Congratulations!! You did it!
+
+This is a lot of material to take in, so congrats on sticking with it. Hopefully it was fun and maybe made you support your local pizzeria along the way!
 
 You are now fully equipped to write React professionally. Everything you learned here is 95%+ of what you would need to write React at any tech company. The last 5% is what I'll teach you in [Intermediate React v6][v6] which has more to do with server-side React and advance performance techniques. But for now, this is almost all you need to know!
 
