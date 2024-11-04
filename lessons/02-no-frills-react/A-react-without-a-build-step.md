@@ -25,9 +25,6 @@ Let's start your project. Create your project directory inside the repo. I'm goi
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="./style.css" />
-    // TODO?: we used href="/public/style.css" in class
     <title>Padre Gino's</title>
   </head>
 
