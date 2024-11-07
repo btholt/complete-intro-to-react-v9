@@ -102,6 +102,10 @@ import Order from "./Order";
 
 Now navigate to [http://localhost:5173/]() and see that you have two inputs, one for the pizza type and a set of radio buttons for the size. Try and select something with the inputs. You'll see that you can't modify them. Why? Let's think about how React works: when you interact with the inputs, React detects that a DOM event happens. When that happens, React thinks _something_ may have changed so it runs a re-render. Providing your render functions are fast, this is a very quick operation. It then diffs what's currently there and what its render pass came up with. It then updates the minimum amount of DOM necessary.
 
+> In the recorded course, the layout is vertical because the `order-pizza` DIV was in the wrong place. Use the markup above. The layout should look like this:
+
+![Order Page Layout](/images/order-page-layout.webp)
+
 Notice we're using `className` instead of `class` on the HTML element for CSS classes. This is because `class` is a reserved word in JS and JSX is still just JS. So instead they opted to use `className` which is the [name of the JS API][js-api] for interacting with class names.
 
 Like `className`, `htmlFor` is used because `for` is a reserved word in JS.

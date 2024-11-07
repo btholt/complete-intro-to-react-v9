@@ -53,11 +53,13 @@ export default [
 - [globals][globals] is a package that is just a big JSON file of what's available in each environment. We're going to be in Node.js and Browser environments so we grabbed those two. If I was being a bit more discerning I'd carefully only apply browser configs to browser files and Node configs to Node.js files.
 - The config objects are applied in order. We did ESLint's JS config first, and then our custom one so we can overwrite it where we want to, and then the Prettier one should always come last as all it does is turn off rules that Prettier itself does; it doesn't add anything.
 
-This is a combination of the recommended configs of ESLint and Prettier. This will lint for both normal JS stuff as well as JSX stuff. Run `npx eslint` now and you should see we have a few errors. Run it again with the `--fix` flag and see it will fix some of it for us! Go fix the rest of your errors and come back. Let's go add this to our npm scripts.
+This is a combination of the recommended configs of ESLint and Prettier. This will lint for both normal JS stuff as well as JSX stuff. Let's add ESLint to our scripts:
 
 ```json
 "lint": "eslint",
 ```
+
+Run `npm run eslint` now and you should see we have a few errors.
 
 > 🚨 ESLint will have a bunch of errors right now. Ignore them; we'll fix them in a sec.
 

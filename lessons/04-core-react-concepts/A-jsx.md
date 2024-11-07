@@ -75,7 +75,7 @@ reactPlugin.configs.flat["jsx-runtime"],
 // add to files
 files: ["**/*.js", "**/*.jsx"], // add JSX
 
-// inside the same object files, after the languageOptions:
+//after the languageOptions object:
 rules: {
   "react/no-unescaped-entities": "off",
   "react/prop-types": "off",
@@ -86,7 +86,7 @@ You can also copy fill config from [the repo][eslint].
 
 We have to add two configs, one to allow ESLint to understand React and add some basic React rules, and one to modernize it as React 17 changed a bit how ESLint interacts with React.
 
-We're also turning off two rules that I don't find particularly useful: unescaped entites (which make you change things like `'` into `&apos`) and prop types which no one has used in a decade at this point. Otherwise we should be good to go.
+We're also turning off two rules that I don't find particularly useful: unescaped entities (which make you change things like `'` into `&apos`) and prop types which no one has used in a decade at this point. Otherwise we should be good to go.
 
 ## Back to JSX
 
