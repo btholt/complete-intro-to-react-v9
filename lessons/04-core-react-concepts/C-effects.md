@@ -77,6 +77,38 @@ async function fetchPizzaTypes() {
 - We're using a loading flag to only display data once it's ready. We'll use TanStack Query in a bit to make this code look cleaner. But this is how you do conditional showing/hiding of components in React.
 - The `key` portion is an interesting one. When React renders arrays of things, it doesn't know the difference between something is new and something is just being re-ordered in the array (think like changing the sorting of a results list, like price high-to-low and then priced low-to-high). Because of this, if you don't tell React how to handle those situations, it just tears it all down and re-renders everything anew. This can cause unnecessary slowness on devices. This is what key is for. Key tells React "this is a simple identifier of what this component is". If React sees you just moved a key to a different order, it will keep the component tree. So key here is to associate the key to something unique about that component. 99/100 this is a database ID of some variety. _Don't_ use the index of the array as that just isn't right unless the array is literally is never going to change order.
 
+### Updating the Selected Pizza & Price
+
+When a pizza is selected, we need to update the selected pizza and price. First, let's format the price after the `selectedPizza` state is updated:
+
+```javascript
+  if(!loading){
+    selectedPizza = pizzaTypes.find((pizza) => pizzaType === pizza.id)
+    price = intl.format(selectedPizza.sizes[pizzaSize])
+  }
+```
+
+When the application loads, we don't have our data yet. So we only want to render a selected pizza and price once we are done loading. Add a condition to the JSX to show "Loading..." initially, and then the selected pizza once we are done loading. Add the condition **before** the closing `</form>` tag:
+
+```jsx
+...
+  {
+    loading ? (
+      <h3>Loading...</h3>
+    ) : (
+      <div className="order-pizza">
+        <Pizza
+          name={selectedPizza.name}
+          description={selectedPizza.description}
+          image={selectedPizza.image}
+        />
+        <p>{price}</p>
+      </div>
+    )
+  }
+</form>
+```
+
 > 🏁 [Click here to see the state of the project up until now: 05-effects][step]
 
 [step]: https://github.com/btholt/citr-v9-project/tree/master/05-effects

@@ -104,7 +104,9 @@ Now navigate to [http://localhost:5173/]() and see that you have two inputs, one
 
 > In the recorded course, the layout is vertical because the `order-pizza` DIV was in the wrong place. Use the markup above. The layout should look like this:
 
+
 ![Order Page Layout](/images/order-page-layout.webp)
+
 
 Notice we're using `className` instead of `class` on the HTML element for CSS classes. This is because `class` is a reserved word in JS and JSX is still just JS. So instead they opted to use `className` which is the [name of the JS API][js-api] for interacting with class names.
 
