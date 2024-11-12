@@ -127,7 +127,7 @@ function Order() {
 
 That's it! This used to be so hard to code split. In some of my old classes we had to go through some serious work to get it work but now this is all it takes! Pretty cool.
 
-Let's add a home page! Make a file called index.lazy.jsx in the routes folder.
+Let's add a home page! Make a file called `index.lazy.jsx` in the routes folder.
 
 ```javascript
 import { createLazyFileRoute, Link } from "@tanstack/react-router";
