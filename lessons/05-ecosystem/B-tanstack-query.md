@@ -51,6 +51,21 @@ import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 <ReactQueryDevtools />
 ```
 
+Finally, we need to add the `QueryClient`. In `App.jsx`, add:
+
+```javascript
+// Add imports
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+
+// Create a property under the router
+const queryClient = new QueryClient()
+
+// Add the provider to the app
+<QueryClientProvider client={queryClient}>
+  <RouterProvider router={router} />
+</QueryClientProvider>
+```
+
 Now in the bottom right of your window you'll see a 🏝️. Click on that and we'll open the dev tools. We haven't used the dev tools yet so it'll be empty.
 
 So react-query makes interacting with APIs very simple and makes it easy to read. You just read a hook and it'll either give you a `isLoading` status or the data. Once the data comes back, it'll refresh the component with the data. So let's start by writing our very simple fetch call. Create a folder called `api` inside of `src` and create getPastOrders.js and put
