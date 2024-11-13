@@ -68,7 +68,7 @@ const queryClient = new QueryClient()
 
 Now in the bottom right of your window you'll see a 🏝️. Click on that and we'll open the dev tools. We haven't used the dev tools yet so it'll be empty.
 
-So react-query makes interacting with APIs very simple and makes it easy to read. You just read a hook and it'll either give you a `isLoading` status or the data. Once the data comes back, it'll refresh the component with the data. So let's start by writing our very simple fetch call. Create a folder called `api` inside of `src` and create getPastOrders.js and put
+So react-query makes interacting with APIs very simple and makes it easy to read. You just read a hook and it'll either give you a `isLoading` status or the data. Once the data comes back, it'll refresh the component with the data. So let's start by writing our very simple fetch call. Create a folder called `api` inside of `src` and create `getPastOrders.js` and add:
 
 ```javascript
 export default async function getPastOrders(page) {
@@ -80,7 +80,7 @@ export default async function getPastOrders(page) {
 
 Very simple request to an API that returns data. That's it!
 
-Let's now go make past.lazy.jsx.
+Let's now go make `past.lazy.jsx`.
 
 ```javascript
 import { useState } from "react";
