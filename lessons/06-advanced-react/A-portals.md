@@ -64,18 +64,6 @@ export default async function getPastOrder(order) {
 }
 ```
 
-Cool, let's go use this to render our Modal now. Open `past.lazy.jsx`. Make the `order.order_id` value a button and add an `onClick` event so clicking it will open the Modal:
-
-```javascript
-<td>
-  <button onClick={() => setFocusedOrder(order.order_id)}>
-    {order.order_id}
-  </button>
-</td>
-<td>{order.date}</td>
-<td>{order.time}</td>
-```
-
 Then render the modal if we have a `focusedOrder`: 
 
 ```javascript
@@ -83,6 +71,7 @@ Then render the modal if we have a `focusedOrder`:
 import getPastOrder from "../api/getPastOrder";
 import Modal from "../Modal";
 
+// NOTE: In the course, Brian makes this a hook/module
 const intl = new Intl.NumberFormat("en-US", {
   style: "currency",
   currency: "USD",
@@ -135,7 +124,7 @@ const { isLoading: isLoadingPastOrder, data: pastOrderData } = useQuery({
       )}
       <button onClick={() => setFocusedOrder()}>Close</button>
     </Modal>
-  ) : null;
+  ) : null
 }
 ```
 
@@ -144,6 +133,19 @@ const { isLoading: isLoadingPastOrder, data: pastOrderData } = useQuery({
 - If there's no focusedOrder, we don't render the Modal, which means the portal is unused.
 - If there is a focusedOrder, we render the modal and show a loading indicator that we're loading the rest of the info.
 - When a user clicks Close, we set the focusedOrder to be undefined again which causes the Modal to unrender.
+
+Finally, we need a way to open the modal. Open `past.lazy.jsx`. Make the `order.order_id` value a button and add an `onClick` event so clicking it will open the Modal:
+
+```javascript
+<td>
+  <button onClick={() => setFocusedOrder(order.order_id)}>
+    {order.order_id}
+  </button>
+</td>
+<td>{order.date}</td>
+<td>{order.time}</td>
+```
+
 
 That's it!
 

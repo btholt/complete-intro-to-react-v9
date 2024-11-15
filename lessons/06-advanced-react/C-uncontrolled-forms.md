@@ -16,7 +16,7 @@ keywords:
 
 We are now going to do a contact page for our site. As part of that, we will accept a name, email, and message from our users and submit it our backend. Like all good backends, ours will log it to the console and then ignore it.
 
-We are going to see two new concepts here: how to do a post with TanStack Query (which they call a mutation) and how to do uncontrolled forms with React. Let's start with our API query. In src/api, create a file called postContact.js and put this in there.
+We are going to see two new concepts here: how to do a post with TanStack Query (which they call a mutation) and how to do uncontrolled forms with React. Let's start with our API query. In src/api, create a file called `postContact.js` and put this in there.
 
 ```javascript
 export default async function postContact(name, email, message) {
@@ -45,7 +45,7 @@ Create a new link to our page in index.lazy.jsx
 </li>
 ```
 
-Create a new route called contact.lazy.jsx in src/routes
+Create a new route called `contact.lazy.jsx` in `src/routes`
 
 ```javascript
 import { createLazyFileRoute } from "@tanstack/react-router";
