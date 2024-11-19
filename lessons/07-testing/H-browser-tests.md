@@ -72,7 +72,7 @@ This is a test-only config for Vite (and therefore Vitest.) Now if a test ends i
 
 Snapshotting works in the browser so that one works okay. Anything using vitest-fetch-mock is Node.js only so for those we need to mark them as node. We're going to make a new Pizza file so let's leave that one. And our custom hook test mocks fetch so that one is Node only.
 
-Okay, now create a Pizza.browser.test.jsx
+Okay, now create a `Pizza.browser.test.jsx`
 
 ```javascript
 import { render } from "vitest-browser-react";
@@ -103,7 +103,7 @@ Looks really similar, right? Alright, let's run it. `npm run test`. You should s
 
 > It will likely prompt you to run a command like `npx playwright install`. You'll install local copies of browsers to able to run them super fast.
 
-Cool, right? And really fast! Let's do one more. Let's make a Header.jsx test. We're going to test that the cart number is correct. Remember when Facebook notification numbers were always wrong? We're going to make sure that doesn't happen with our cart indicator. In your Header.jsx file:
+Cool, right? And really fast! Let's do one more. Let's make a `Header.jsx` test. We're going to test that the cart number is correct. Remember when Facebook notification numbers were always wrong? We're going to make sure that doesn't happen with our cart indicator. In your Header.jsx file:
 
 ```javascript
 data-testid="cart-number" // add to .nav-cart-number
@@ -164,6 +164,45 @@ test("correctly renders a header with a three cart count", async () => {
 We do have to bend over a bit backwards to make sure TanStack Router is happy, hence all the making of root routes. Remember also that our cart gets its cart from context so we have to pass it in that way. Beyond that, it works very similar!
 
 Again, these are early days for browser-based testing with Vite so proceed in your professional settings with caution. However the future is bright with Playwright!
+
+> 🚨 NOTE: If you want to add code coverage back into the project, you'll need to use Istanbul since, at the time of this recording, this wasn't supported in React 19 with V8
+
+First, you'll need to uninstall V8 and install Istanbul:
+
+```bash
+npm uninstall @vitest/coverage-v8@2.1.3
+npm install -D @vitest/istanbul
+```
+Then move the coverage configuration to the `vitest.workspace.js` file:
+
+```javascript
+
+export default defineWorkspace([
+  {
+    extends: "./vite.config.js",
+    test: {
+      // ...
+      // add to the end of the happy-dom test object 
+      coverage: {
+        provider: "istanbul"
+        reporter: ["text", "json", "html"],
+      },
+    },
+  },
+  {
+    extends: "./vite.config.js",
+    test: {
+      // ...
+      // add to the end of the browser test object 
+      coverage: {
+        reporter: ["text", "json", "html"],
+      },
+    },
+  },
+]);
+```
+
+
 
 > 🏁 [Click here to see the state of the project up until now: 14-testing][step]
 

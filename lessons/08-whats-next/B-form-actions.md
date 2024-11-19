@@ -42,7 +42,7 @@ mutationFn: function (formData) { // change to formData
 
 That's it! It really is just a convenience function to make handling for submits even easier to do. There's nothing wrong with what we had either, and that will continue to work as-is too.
 
-Let's go convert order.lazy.jsx too
+Let's go convert `order.lazy.jsx` too
 
 ```javascript
 // extract submission function from form
@@ -67,9 +67,9 @@ function addToCart(formData) {
 
 Since it's on the server, we can now safely insert into our database, directly from inside our React component. React/Next.js will handle all the details of handling the execution of that on server. Pretty cool, right? We'll talk more about this in Intermediate React v6.
 
-Let's do one more cool trick here. There's a new hook called `useFormData` that lets children components see if they're inside of a form being submitted without having to pass lots of data around.
+Let's do one more cool trick here. There's a new hook called `useFormStatus` that lets children components see if they're inside of a form being submitted without having to pass lots of data around.
 
-In contact.lazy.jsx
+In `contact.lazy.jsx`
 
 ```javascript
 // at top

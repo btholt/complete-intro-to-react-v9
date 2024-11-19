@@ -12,7 +12,7 @@ keywords:
   - API testing
 ---
 
-Let's say we needs tests for our custom hook, usePizzaOfTheDay. Testing custom hooks is a bit of a trick because they are inherently tied to the internal workings of React: they can't be called outside of a component. So how we do we get around that? We fake a component! Make a file called usePizzaOfTheDay.test.jsx in our `__tests__` directory.
+Let's say we needs tests for our custom hook, usePizzaOfTheDay. Testing custom hooks is a bit of a trick because they are inherently tied to the internal workings of React: they can't be called outside of a component. So how we do we get around that? We fake a component! Make a file called `usePizzaOfTheDay.test.jsx` in our `__tests__` directory.
 
 ```javascript
 import { expect, test, vi } from "vitest";

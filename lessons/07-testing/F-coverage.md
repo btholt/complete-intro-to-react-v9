@@ -21,14 +21,15 @@ One last very cool trick that Vitest has built into it: [v8][v8]. v8 uses Chrome
 Run the following
 
 ```bash
-npm i -D @vitest/coverage-v8
+npm i -D @vitest/coverage-v8@2.1.3
 ```
 
 > You can also use [Istanbul][istanbul] if you want to. `npm i -D @vitest/coverage-istanbul` will get you the package. But I'd say v8 is the superior tool.
 
-Now add this to your vite.config.js
+Now add this to your `vite.config.js`
 
 ```javascript
+// inside the test object
 coverage: {
   reporter: ["text", "json", "html"],
 },

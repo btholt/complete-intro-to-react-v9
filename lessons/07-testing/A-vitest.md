@@ -46,7 +46,7 @@ Let's go add an npm script. In your package.json.
 
 This command lets you run Jest in an interactive mode where it will re-run tests selectively as you save them. This lets you get instant feedback if your test is working or not. This is probably my favorite feature of Vitest.
 
-Okay, one little configuration to add to your vite.config.js.
+Okay, one little configuration to add to your `vite.config.js`.
 
 ```javascript
 // add this to the config object
