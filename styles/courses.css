@@ -76,7 +76,8 @@ a {
 }
 
 header .cta-btn {
-  display: none; /* only displays at large screen sizes */
+  display: none;
+  /* only displays at large screen sizes */
 }
 
 .main .cta-btn {
@@ -130,16 +131,19 @@ header .cta-btn {
     width: 100%;
     min-height: 45vh;
   }
+
   .jumbotron .courseInfo,
   .jumbotron .courseIcon {
     display: flex;
     justify-content: center;
     align-items: center;
   }
+
   .jumbotron .courseInfo {
     width: 65%;
     text-align: right;
   }
+
   .jumbotron .courseIcon {
     width: 35%;
     display: flex;
@@ -150,6 +154,7 @@ header .cta-btn {
   .author {
     justify-content: flex-end;
   }
+
   .jumbotron .courseInfo-inner {
     max-width: 85%;
   }
@@ -226,7 +231,7 @@ header .cta-btn {
   border-radius: 8px;
 }
 
-.lesson > h1 {
+.lesson>h1 {
   color: var(--text-header);
   font-size: 24px;
 }
@@ -333,11 +338,11 @@ blockquote {
   margin: 10px 0;
 }
 
-blockquote > *:last-child {
+blockquote>*:last-child {
   margin-bottom: 0;
 }
 
-blockquote > *:first-child {
+blockquote>*:first-child {
   margin-top: 0;
 }
 
@@ -380,7 +385,7 @@ ol.sections-name {
   padding: 0;
 }
 
-ol.sections-name > li {
+ol.sections-name>li {
   counter-increment: my-awesome-counter;
   display: flex;
   flex-direction: row;
@@ -391,6 +396,7 @@ ol.sections-name > li {
   border-bottom-right-radius: 5px;
   border-top-right-radius: 5px;
 }
+
 ol.sections-name .lesson-preface {
   color: var(--icons);
   display: flex;
@@ -403,7 +409,7 @@ ol.sections-name .lesson-preface {
   width: 40%;
 }
 
-.lesson-preface.lesson-preface > svg {
+.lesson-preface.lesson-preface>svg {
   width: 80%;
   height: inherit;
   max-height: 100px;
@@ -440,12 +446,12 @@ ol.sections-name .lesson-details {
   right: 0;
 }
 
-.details-bg > svg {
+.details-bg>svg {
   width: 100%;
   height: auto;
 }
 
-.details-bg > svg path {
+.details-bg>svg path {
   transition: fill 0.25s;
 }
 
@@ -455,10 +461,11 @@ ol.sections-name .lesson-details {
 }
 
 @media (min-width: 1000px) {
-  ol.sections-name > li::before {
+  ol.sections-name>li::before {
     border-bottom-left-radius: 5px;
     border-top-left-radius: 5px;
   }
+
   ol.sections-name .lesson-details {
     border-bottom-right-radius: 5px;
     border-top-right-radius: 5px;
@@ -482,6 +489,19 @@ ol.sections-name .lesson-details {
   display: inline-block;
   font-weight: bold;
   margin-bottom: 20px;
+}
+
+.lesson-content h3 {
+  margin-top: 2rem;
+}
+
+.lesson-content h3::after {
+  content: "";
+  display: block;
+  height: 1px;
+  margin-top: 5px;
+  background: var(--text-header);
+  max-width: 300px;
 }
 
 .lesson-links {
