@@ -59,7 +59,7 @@ This is a combination of the recommended configs of ESLint and Prettier. This wi
 "lint": "eslint",
 ```
 
-Run `npm run eslint` now and you should see we have a few errors.
+Run `npm run lint` now and you should see we have a few errors.
 
 > 🚨 ESLint will have a bunch of errors right now. Ignore them; we'll fix them in a sec.
 
