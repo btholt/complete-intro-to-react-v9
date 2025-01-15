@@ -36,6 +36,7 @@ export default function App({ Component, pageProps }) {
           href={`/images/favicon-16x16.png`}
         />
         <link rel="icon" type="image/x-icon" href={`/images/favicon.ico`} />
+        <base target="_blank" />
       </Head>
       <Component {...pageProps} />
     </Layout>
