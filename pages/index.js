@@ -18,7 +18,6 @@ export default function Lessons({ sections }) {
         <meta name="og:title" content={courseInfo.title}></meta>
         <meta name="og:image" content={`/images/social-share-cover.jpg`}></meta>
         <meta name="twitter:card" content="summary_large_image"></meta>
-        <base target="_blank"></base>
       </Head>
       <div>
         <div className="jumbotron">
