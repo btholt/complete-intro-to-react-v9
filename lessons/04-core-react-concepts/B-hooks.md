@@ -100,7 +100,7 @@ import Order from "./Order";
 
 > 🚨 You'll have some errors in the console, that's okay.
 
-Now navigate to [http://localhost:5173/]() and see that you have two inputs, one for the pizza type and a set of radio buttons for the size. Try and select something with the inputs. You'll see that you can't modify them. Why? Let's think about how React works: when you interact with the inputs, React detects that a DOM event happens. When that happens, React thinks _something_ may have changed so it runs a re-render. Providing your render functions are fast, this is a very quick operation. It then diffs what's currently there and what its render pass came up with. It then updates the minimum amount of DOM necessary.
+Now navigate to http://localhost:5173/ and see that you have two inputs, one for the pizza type and a set of radio buttons for the size. Try and select something with the inputs. You'll see that you can't modify them. Why? Let's think about how React works: when you interact with the inputs, React detects that a DOM event happens. When that happens, React thinks _something_ may have changed so it runs a re-render. Providing your render functions are fast, this is a very quick operation. It then diffs what's currently there and what its render pass came up with. It then updates the minimum amount of DOM necessary.
 
 > In the recorded course, the layout is vertical because the `order-pizza` DIV was in the wrong place. Use the markup above. The layout should look like this:
 
