@@ -37,7 +37,7 @@ Let's start your project. Create your project directory inside the repo. I'm goi
 </html>
 ```
 
-Let's run this. We could open it directly in our browser but I like using [serve][serve]. Run `npx serve` and open [http://localhost:3000/]() in your browser.
+Let's run this. We could open it directly in our browser but I like using [serve][serve]. Run `npx serve` and open http://localhost:3000/ in your browser.
 
 - Pretty standard HTML5 document. If this is confusing, I teach another course called [Intro to Web Dev][webdev] that can help you out.
 - We're adding a root div. We'll render our React app here in a sec. It doesn't _have_ to be called root, just a common practice.

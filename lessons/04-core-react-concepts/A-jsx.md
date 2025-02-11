@@ -132,7 +132,7 @@ Notice we have Pizza as a component. Notice that the `P` in `Pizza` is capitaliz
 
 We now pass props down as we add attributes to an HTML tag. Pretty cool.
 
-You can test your app by running `npm run dev` and opening the URL shown in the terminal. It's typically [http://localhost:5173/]()
+You can test your app by running `npm run dev` and opening the URL shown in the terminal. It's typically http://localhost:5173/
 
 ## The API / Image Server
 
