@@ -138,7 +138,7 @@ You can test your app by running `npm run dev` and opening the URL shown in the 
 
 For this course we will use a little Fastify server I built for you. It's in the [api][api] directory. We are going to use Vite.js to proxy to this API server. This is a useful trick to do for local development if you have a separate frontend in a backend. Normally you'd have something like NGINX routing traffic to separate frontend and backend servers. For now we'll just use Vite.
 
-> Note: This means you'll need to have TWO terminal windows running. One terminal for the API server (which you won't have to touch once it's running). The other terminal is is our Vite server for our web app. 
+> Note: This means you'll need to have TWO terminal windows running. One terminal for the API server (which you won't have to touch once it's running). The other terminal is is our Vite server for our web app.
 
 Add this to you vite.config.js
 
@@ -163,7 +163,21 @@ export default defineConfig({
 
 ## Run the API Server
 
-Open a new terminal and navigate to the `api` directory. Note that this server is _outside_ your project directory. You'll need to install the dependencies with `npm install`. After that, you can start the server by running `npm run dev`. You need both servers running at the same time. Your Vite server will intercept `api` and `public` calls and reroute them to your API server!
+If you didn't do this earlier in the course, download or clone [the citr-v9-project repo](https://github.com/btholt/citr-v9-project). You only need the `api` directory for the API server.
+
+Open a new terminal and navigate to the `api` directory. Note that this server is _outside_ your project directory.
+
+Using **Node 20 or higher**, go into the `api` directory, install the dependencies, and run the server:
+
+```bash
+cd citr-v9-project/api
+npm install
+npm run dev
+```
+
+The server should start on port 3000. To verify it's working, visit [http://localhost:3000/api/pizzas](http://localhost:3000/api/pizzas) and you should see the pizza JSON data.
+
+You need both servers running at the same time. With the Vite proxy configuration from above, your Vite server will intercept `api` and `public` calls in the React application and reroute them to your API server!
 
 Now let's add images to our Pizza.
 
