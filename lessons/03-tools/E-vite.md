@@ -20,7 +20,7 @@ The build tool we are going to be using today is called [Vite][vite]. Vite (pron
 
 Our end result that we want from a build tool is that
 
-- We can separate files out for code organization and have a tool stitch them together for us
+- We can have separate files out for code organization and have a tool stitch them together for us
 - We can include external, third-party libraries from npm (like React!)
 - The tool will optimize the code for us by minifying and other optimizing techniques
 
