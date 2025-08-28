@@ -43,7 +43,7 @@ First run `npm install -D prettier@3.3.3` `-D` means it's for development only.
 
 ```json
 "scripts": {
-	"format": "prettier --write \"src/**/*.{js,jsx}\""
+	"format": "prettier --write \"src/**/*.{js,jsx,css,html}\""
 },
 ```
 
